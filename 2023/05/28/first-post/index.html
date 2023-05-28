@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>first post | YCC1203 の小窩</title>
+        <title>Test | YCC1203 の小窩</title>
         <meta name="author" content="YCC1203" />
         <meta name="description" content="" />
         <meta name="keywords" content="" />
@@ -147,7 +147,7 @@
                 <div id="main" v-show="!loading">
                     <div class="article">
     <div>
-        <h1>first post</h1>
+        <h1>Test</h1>
     </div>
     <div class="info">
         <span class="date">
@@ -158,22 +158,57 @@
         </span>
         
         
-        <span class="tags">
-            <span class="icon">
-                <i class="fa-solid fa-tags fa-fw"></i>
-            </span>
-            
-            <span class="tag">
-                
-                <a href="/tags/first-post/" style="color: #03a9f4">first post</a>
-            </span>
-            
-        </span>
-        
     </div>
     
     <div class="content" v-pre>
-        
+        <blockquote>
+<h3 id="運作原理"><a href="#運作原理" class="headerlink" title="運作原理:"></a>運作原理:</h3><p>　　　又稱循序搜尋法，是最簡單的搜尋法。原理是在資料列中從頭開始逐一的搜尋，一筆一筆的資料值與搜尋目標值做比對，<br>　　　直到找到為止。<br>　　　此種搜尋優點是搜尋前<strong>不需要將資料做任何排序，因為都是從頭開始搜尋。</strong><br>　　　缺點是若目標資料剛好排在最後一筆，則需要作n次的比對，因此<strong>不適合資料量過大的搜尋。</strong></p>
+</blockquote>
+<ul>
+<li><p>oscar</p>
+</li>
+<li><p>joy</p>
+</li>
+<li><p>mary</p>
+<hr>
+</li>
+</ul>
+<p><a href="https://ycc1203.github.io/2023/05/28/first-post/">This link</a></p>
+<pre><code>#include &lt;iostream&gt;
+
+using namespace std;
+
+int LinearSearch(int data[], int);
+
+int main()
+&#123;   
+    int search, ans;
+    int data[] = &#123;3, 7, 14, 20, 23, 32, 41, 44, 56, 57, 73, 89, 93&#125;;
+    cout &lt;&lt; &quot;原始資料有:&quot; &lt;&lt; endl;
+    for(int i=0; i&lt;13; i++) 
+        cout &lt;&lt; data[i] &lt;&lt; &quot;,&quot;;
+    cout &lt;&lt; data[12] &lt;&lt; endl;
+    cout &lt;&lt; &quot;請輸入欲搜尋的資料:&quot;;
+    cin &gt;&gt; search;
+    ans = LinearSearch(data, search);
+    if(ans == -1) &#123;
+        cout &lt;&lt; &quot;找不到資料&quot; &lt;&lt; search &lt;&lt; endl;
+    &#125; else&#123;
+        cout &lt;&lt; &quot;在第&quot; &lt;&lt; ans+1 &lt;&lt; &quot;筆資料找到&quot; &lt;&lt; search &lt;&lt; endl;
+    &#125;
+    return 0;
+&#125;
+
+int LinearSearch(int data[], int search) &#123;
+    for(int i=0; i&lt;13; i++) &#123;
+        if(data[i] == search) &#123;
+            return i;
+        &#125;
+    &#125;
+    return -1;
+&#125;
+</code></pre>
+
     </div>
     
     
