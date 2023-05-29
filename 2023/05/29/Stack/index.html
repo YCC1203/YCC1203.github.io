@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>About | YCC1203&#39;s Blog</title>
+        <title>堆疊(Stack) | YCC1203&#39;s Blog</title>
         <meta name="author" content="YCC1203" />
         <meta name="description" content="" />
         <meta name="keywords" content="" />
@@ -152,21 +152,115 @@
                 <div id="main" v-show="!loading">
                     <div class="article">
     <div>
-        <h1>About</h1>
+        <h1>堆疊(Stack)</h1>
     </div>
     <div class="info">
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2023/5/28
+            2023/5/29
         </span>
         
+        <span class="category">
+            <a href="/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                程式筆記
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/%E5%A0%86%E7%96%8A%E4%BD%87%E5%88%97/" style="color: #03a9f4">堆疊佇列</a>
+            </span>
+            
+        </span>
         
     </div>
     
     <div class="content" v-pre>
-        <h2 id="一個喜歡寫程式的高中生，雖然說喜歡但實力也就停留在入門階段，我要做一個夢：變成遊戲工程師"><a href="#一個喜歡寫程式的高中生，雖然說喜歡但實力也就停留在入門階段，我要做一個夢：變成遊戲工程師" class="headerlink" title="一個喜歡寫程式的高中生，雖然說喜歡但實力也就停留在入門階段，我要做一個夢：變成遊戲工程師"></a>一個喜歡寫程式的高中生，雖然說喜歡但實力也就停留在入門階段，我要做一個夢<font color=LightCoral><strong>：變成遊戲工程師</strong></h2>
+        <blockquote>
+<h3 id="定義及介紹"><a href="#定義及介紹" class="headerlink" title="定義及介紹"></a><font color=LightCoral>定義及介紹</font></h3><p>　　　堆疊具有後進先出(LIFO)的特性，堆疊有兩大基本動作：push、pop，當需要加入資料到頂端時可以使用push，<br>　　　而當需要移除資料時，可以使用pop將資料從頂端移除。</p>
+</blockquote>
+<hr>
+<h3 id="學習影片"><a href="#學習影片" class="headerlink" title="學習影片"></a><font color=LightCoral>學習影片</font></h3><p><a target="_blank" rel="noopener" href="https://youtu.be/2kR42B5zk-c">109學年度資訊科技學科中心加深加廣課程影片_進階程式設計－堆疊佇列</a></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2kR42B5zk-c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<hr>
+<h3 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼"></a><font color=LightCoral>程式碼</font></h3><pre><code>#include &lt;iostream&gt;
+
+using namespace std;
+
+//自定義資料型態
+struct Node &#123;
+    int data;
+    Node *next;
+&#125;;
+
+//stack有三個動作
+Node* push(struct Node*, int);
+Node* pop(struct Node*);
+void displayList(struct Node*);
+
+//主程式
+int main()
+&#123;
+    struct Node* head = NULL;
+    head = push(head, 20);
+    displayList(head);
+    
+    head = push(head, 30);
+    displayList(head);
+    
+    head = pop(head);
+    cout &lt;&lt; &quot;Final steak:&quot; &lt;&lt; endl;
+    displayList(head);
+
+    return 0;
+&#125;
+
+//輸出堆疊中的資料
+void displayList(struct Node *node) &#123;
+    while (node!=NULL) &#123;
+        cout &lt;&lt; node-&gt;data &lt;&lt;&quot;--&gt;&quot;;
+        node = node-&gt;next;
+    &#125;
+    if (node == NULL) &#123;
+        cout &lt;&lt; &quot;null&quot; &lt;&lt; endl;
+    &#125;
+&#125;
+
+//推入之動作
+Node* push(struct Node* head, int node_data) &#123;
+    struct Node* newNode = new Node;
+    newNode-&gt;data = node_data;
+    newNode-&gt;next = head;
+    head = newNode;
+    return head;
+&#125;
+
+//移出之動作
+Node* pop(struct Node* head) &#123;
+    if (head ==NULL) &#123;
+        return NULL;
+    &#125;
+    struct Node* tempNode = head;
+    head = head-&gt;next;
+    delete tempNode;
+    
+    return head;
+&#125;
+</code></pre>
+<hr>
+<h3 id="應用及實例"><a href="#應用及實例" class="headerlink" title="應用及實例"></a><font color=LightCoral>應用及實例</font></h3><h5 id="1-改變序列的順序"><a href="#1-改變序列的順序" class="headerlink" title="1. 改變序列的順序"></a><font color=Orange>1. 改變序列的順序</font></h5><h6 id="例：進入堆疊的順序為1、2、3，則經由Push、Pop、Push、Push、Pop、Pop，取出堆疊的先後-順序"><a href="#例：進入堆疊的順序為1、2、3，則經由Push、Pop、Push、Push、Pop、Pop，取出堆疊的先後-順序" class="headerlink" title="例：進入堆疊的順序為1、2、3，則經由Push、Pop、Push、Push、Pop、Pop，取出堆疊的先後 順序"></a>例：進入堆疊的順序為1、2、3，則經由Push、Pop、Push、Push、Pop、Pop，取出堆疊的先後 順序</h6><h6 id="將變成1、3、2。"><a href="#將變成1、3、2。" class="headerlink" title="將變成1、3、2。"></a>將變成1、3、2。</h6><h5 id="2-副程式的呼叫"><a href="#2-副程式的呼叫" class="headerlink" title="2. 副程式的呼叫"></a><font color=Orange>2. 副程式的呼叫</font></h5><h5 id="3-處理遞迴式呼叫"><a href="#3-處理遞迴式呼叫" class="headerlink" title="3. 處理遞迴式呼叫"></a><font color=Orange>3. 處理遞迴式呼叫</font></h5><h5 id="4-算術式之轉換"><a href="#4-算術式之轉換" class="headerlink" title="4. 算術式之轉換"></a><font color=Orange>4. 算術式之轉換</font></h5><h5 id="5-二元樹的追蹤"><a href="#5-二元樹的追蹤" class="headerlink" title="5. 二元樹的追蹤"></a><font color=Orange>5. 二元樹的追蹤</font></h5>
     </div>
     
     

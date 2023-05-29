@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>About | YCC1203&#39;s Blog</title>
+        <title>鏈結串列(LinkedList) | YCC1203&#39;s Blog</title>
         <meta name="author" content="YCC1203" />
         <meta name="description" content="" />
         <meta name="keywords" content="" />
@@ -152,21 +152,203 @@
                 <div id="main" v-show="!loading">
                     <div class="article">
     <div>
-        <h1>About</h1>
+        <h1>鏈結串列(LinkedList)</h1>
     </div>
     <div class="info">
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2023/5/28
+            2023/5/29
+        </span>
+        
+        <span class="category">
+            <a href="/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                程式筆記
+            </a>
         </span>
         
         
     </div>
     
     <div class="content" v-pre>
-        <h2 id="一個喜歡寫程式的高中生，雖然說喜歡但實力也就停留在入門階段，我要做一個夢：變成遊戲工程師"><a href="#一個喜歡寫程式的高中生，雖然說喜歡但實力也就停留在入門階段，我要做一個夢：變成遊戲工程師" class="headerlink" title="一個喜歡寫程式的高中生，雖然說喜歡但實力也就停留在入門階段，我要做一個夢：變成遊戲工程師"></a>一個喜歡寫程式的高中生，雖然說喜歡但實力也就停留在入門階段，我要做一個夢<font color=LightCoral><strong>：變成遊戲工程師</strong></h2>
+        <blockquote>
+<h3 id="定義及介紹"><a href="#定義及介紹" class="headerlink" title="定義及介紹"></a><font color=LightCoral>定義及介紹</font></h3><p>　　　可以把鏈結串列想像成一輛火車，車廂稱為「節點」，節點包含資料與連結，資料就是這個節點所儲<br>　　　存的資料，連結儲存的是下一個節點的位址，數個節點連接起來就成為鏈結串列。</p>
+</blockquote>
+<hr>
+<h3 id="學習影片"><a href="#學習影片" class="headerlink" title="學習影片"></a><font color=LightCoral>學習影片</font></h3><p><a target="_blank" rel="noopener" href="https://youtu.be/VtrrLX4rif8">109學年度資訊科技學科中心加深加廣課程影片_進階程式設計－串列</a></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VtrrLX4rif8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<hr>
+<h3 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼"></a><font color=LightCoral>程式碼</font></h3><pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+struct Node* push(struct Node* head, int node_data);
+struct Node* append(struct Node* head, int node_data);
+struct Node* insert(struct Node* head, int num, int node_data);
+struct Node* deleteFirstNode(struct Node* head);
+struct Node* deleteLastNode(struct Node* head);
+struct Node* deleteMiddleNode(struct Node* head, int num);
+void displayList(struct Node* node);
+
+struct Node &#123;
+    int data;
+    Node *next;
+&#125;;
+
+int main()&#123;
+    Node * head = NULL;
+    
+    head = append(head, 10);
+    displayList(head);
+    head = push(head, 20);
+    displayList(head);
+    head = push(head, 30);
+    displayList(head);
+    head = append(head , 40);
+    displayList(head);
+    head = insert(head, 2, 50);
+    displayList(head);
+    head = deleteFirstNode(head);
+    displayList(head);
+    head = deleteLastNode(head);
+    displayList(head);
+    head = deleteMiddleNode(head,1);
+    displayList(head);
+    
+    return 0;;
+&#125;
+
+//增加在頭
+Node* push(struct Node* head, int node_data) &#123;
+    struct Node* newNode = new Node;
+    newNode-&gt;data = node_data;
+    newNode-&gt;next = head;
+    head = newNode;
+    return head;
+&#125;
+
+//增加在尾
+Node* append(struct Node* head, int Node_data) &#123;
+    Node* newNode = new Node;
+    Node* current = head;
+    
+    newNode-&gt;data = Node_data;
+    newNode-&gt;next = NULL;
+    
+    if (head == NULL) &#123;
+        head = newNode;
+        return head;
+    &#125;
+    
+    while (current-&gt;next !=NULL) &#123;
+        current = current-&gt;next;
+    &#125;
+    current-&gt;next = newNode;
+    return head;
+&#125;
+
+//插入到某位置
+Node* insert(struct Node* head, int num, int node_data) &#123;
+    if (head == NULL) &#123;
+        cout &lt;&lt; &quot;不能是空的&quot; &lt;&lt; endl;
+        return NULL;
+    &#125;
+    int listlen = 0;
+    struct Node* newNode = new Node;
+    struct Node* count_list = head;
+    struct Node* current = head;
+    
+    newNode-&gt;data = node_data;
+    
+    while (count_list != NULL) &#123;
+        listlen++;
+        count_list = count_list-&gt;next;
+    &#125;
+    if (num == 0 || num &gt;= listlen) &#123;
+        cout &lt;&lt; &quot;位置輸入錯誤&quot; &lt;&lt; endl;
+    &#125;else &#123;
+        for (int i=1 ; i&lt;num; i++)
+            current = current-&gt;next;
+        newNode-&gt;next = current-&gt;next;
+        current-&gt;next = newNode;
+    &#125;
+    return head;
+&#125;
+
+//刪除開頭
+Node* deleteFirstNode(struct Node* head) &#123;
+     if (head == NULL) &#123;
+         return NULL;
+     &#125;
+     Node* tempNode = head;
+     head = head-&gt;next;
+     
+     delete tempNode;
+     
+     return head;
+ &#125;
+ 
+//刪除結尾
+Node* deleteLastNode(struct Node* head) &#123;
+     if (head == NULL) &#123;
+         return NULL;
+     &#125;
+     if (head-&gt;next == NULL) &#123;
+        delete head;
+        return NULL;
+     &#125;
+     Node* second_last = head;
+     while (second_last-&gt;next-&gt;next != NULL) &#123;
+         second_last = second_last-&gt;next;
+     &#125;
+     delete (second_last-&gt;next);
+     second_last-&gt;next = NULL;
+     
+     return head;
+ &#125;
+
+//刪除中間位置
+Node* deleteMiddleNode(struct Node* head, int num) &#123;
+     if (head == NULL) &#123;
+        cout &lt;&lt; &quot;不能是空的&quot; &lt;&lt; endl;
+        return NULL;
+    &#125;
+    int listlen = 0;
+    struct Node* count_list = head;
+    struct Node* remove_pre = head;
+    struct Node* remove;
+    while (count_list != NULL) &#123;
+        listlen++;
+        count_list = count_list-&gt;next;
+    &#125;
+    if (num == 0 || num &gt;= listlen) &#123;
+        cout &lt;&lt; &quot;位置輸入錯誤&quot; &lt;&lt; endl;
+    &#125;else &#123;
+        for (int i=1 ; i&lt;num; i++)
+            remove_pre = remove_pre-&gt;next;
+        remove = remove_pre-&gt;next;
+        remove_pre-&gt;next = remove-&gt;next;
+        delete remove;
+    &#125;
+    return head;
+ &#125;
+ 
+ //顯示連結串列
+ void displayList(struct Node* node) &#123;
+     while (node != NULL) &#123;
+         cout &lt;&lt; node-&gt;data &lt;&lt; &quot;--&gt;&quot;;
+         node = node-&gt;next;
+     &#125;
+     if (node == NULL)
+         cout &lt;&lt; &quot;null&quot; &lt;&lt; endl;
+ &#125;
+</code></pre>
+<hr>
+<h3 id="應用及實例介紹"><a href="#應用及實例介紹" class="headerlink" title="應用及實例介紹"></a><font color=LightCoral>應用及實例介紹</font></h3>
     </div>
     
     

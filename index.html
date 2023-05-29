@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>YCC1203 の小窩</title>
+        <title>YCC1203&#39;s Blog</title>
         <meta name="author" content="YCC1203" />
         <meta name="description" content="" />
         <meta name="keywords" content="" />
@@ -56,7 +56,7 @@
             <nav id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
     <div id="desktop-menu">
         <a class="title" href="/">
-            <span>YCC1203 の小窩</span>
+            <span>YCC1203&#39;S BLOG</span>
         </a>
         
         <a href="/">
@@ -88,7 +88,7 @@
     <div id="mobile-menu">
         <div class="title" @click="showMenuItems = !showMenuItems">
             <i class="fa-solid fa-bars fa-fw"></i>
-            <span>&emsp;YCC1203 の小窩</span>
+            <span>&emsp;YCC1203&#39;S BLOG</span>
         </div>
         <transition name="slide">
             <div class="items" v-show="showMenuItems">
@@ -157,7 +157,7 @@
         <span class="loop"></span>
         <span class="info">
             <div class="wrap">
-                <h1>YCC1203 の小窩</h1>
+                <h1>YCC1203&#39;s Blog</h1>
                 <h3></h3>
                 <h5></h5>
             </div>
@@ -169,17 +169,296 @@
         
 
 <div class="post">
-    <a href="/2023/05/28/Linear-Search/">
-        <h2 class="post-title">線性搜尋法 Linear Search</h2>
+    <a href="/2023/05/29/InsertSort/">
+        <h2 class="post-title">插入排序法(InsertSort)</h2>
     </a>
     <div class="category-and-date">
         
         <span class="category">
-            <a href="/categories/%E7%AD%86%E8%A8%98/">
+            <a href="/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/">
                 <span class="icon">
                     <i class="fa-solid fa-bookmark fa-fw"></i>
                 </span>
-                筆記
+                程式筆記
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/5/29
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>構建有序序列，對於未排序數據，在已排序序列中從後向前掃描，找到相應位置並插入。</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/%E6%8E%92%E5%BA%8F%E6%B3%95/" style="color: #ffa2c4">排序法</a>
+        </span>
+        
+    </div>
+    <a href="/2023/05/29/InsertSort/" class="go-post">閱讀全文</a>
+</div>
+
+<div class="post">
+    <a href="/2023/05/29/SelectSort/">
+        <h2 class="post-title">選擇排序法(Select Sort)</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                程式筆記
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/5/29
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>選擇排序法 selection sort 的原理是先在所有資料中挑選出一個最小的數值放在放在第一個，再從第二個到尾端的資料中挑選出一個最小的數值放在第二個，這樣一直迭代下去，最終將能獲得排序好的升序串列(由小到大)</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/%E6%8E%92%E5%BA%8F%E6%B3%95/" style="color: #ffa2c4">排序法</a>
+        </span>
+        
+    </div>
+    <a href="/2023/05/29/SelectSort/" class="go-post">閱讀全文</a>
+</div>
+
+<div class="post">
+    <a href="/2023/05/29/BubbleSort/">
+        <h2 class="post-title">泡沫排序法(Bubble Sort)</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                程式筆記
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/5/29
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>將相鄰的兩筆資料比較後做排序</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/%E6%8E%92%E5%BA%8F%E6%B3%95/" style="color: #ffa2c4">排序法</a>
+        </span>
+        
+    </div>
+    <a href="/2023/05/29/BubbleSort/" class="go-post">閱讀全文</a>
+</div>
+
+<div class="post">
+    <a href="/2023/05/29/LinkedList/">
+        <h2 class="post-title">鏈結串列(LinkedList)</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                程式筆記
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/5/29
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>可以把鏈結串列想像成一輛火車，車廂稱為「節點」，節點包含資料與連結，資料就是這個節點所儲存的資料，連結儲存的是下一個節點的位址，數個節點連接起來就成為鏈結串列。</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+    </div>
+    <a href="/2023/05/29/LinkedList/" class="go-post">閱讀全文</a>
+</div>
+
+<div class="post">
+    <a href="/2023/05/29/Queue/">
+        <h2 class="post-title">佇列(Queue)</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                程式筆記
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/5/29
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>佇列具有先進先出(FIFO)的特性，佇列有兩大基本動作：Enqueue、Dequeue，當需要新增資料時，使用Enqueue會在尾端新增資料，而當需要刪除資料時，使用Dequeue會在前端刪除資料。</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/%E5%A0%86%E7%96%8A%E4%BD%87%E5%88%97/" style="color: #00bcd4">堆疊佇列</a>
+        </span>
+        
+    </div>
+    <a href="/2023/05/29/Queue/" class="go-post">閱讀全文</a>
+</div>
+
+<div class="post">
+    <a href="/2023/05/29/Stack/">
+        <h2 class="post-title">堆疊(Stack)</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                程式筆記
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/5/29
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>堆疊具有後進先出(LIFO)的特性，堆疊有兩大基本動作：push、pop，當需要加入資料到頂端時可以使用push，而當需要移除資料時，可以使用pop將資料從頂端移除。</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/%E5%A0%86%E7%96%8A%E4%BD%87%E5%88%97/" style="color: #ff7d73">堆疊佇列</a>
+        </span>
+        
+    </div>
+    <a href="/2023/05/29/Stack/" class="go-post">閱讀全文</a>
+</div>
+
+<div class="post">
+    <a href="/2023/05/28/Linear-Search/">
+        <h2 class="post-title">線性搜尋法(Linear Search)</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                程式筆記
             </a>
         </span>
         
@@ -209,7 +488,7 @@
         
         <span class="tag">
             
-            <a href="/tags/%E6%90%9C%E5%B0%8B%E6%B3%95/" style="color: #ff7d73">搜尋法</a>
+            <a href="/tags/%E6%90%9C%E5%B0%8B%E6%B3%95/" style="color: #03a9f4">搜尋法</a>
         </span>
         
     </div>
@@ -330,7 +609,7 @@
     <div id="footer-wrap">
         <div>
             &copy;
-            2022 - 2023 YCC1203 の小窩
+            2022 - 2023 YCC1203&#39;s Blog
             <span id="footer-icon">
                 <i class="fa-solid fa-font-awesome fa-fw"></i>
             </span>
@@ -358,3 +637,6 @@
         
     </body>
 </html>
+
+<script src="/js/<file>"></script>
+<link rel="stylesheet" href="/css/<file>" />
