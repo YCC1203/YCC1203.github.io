@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>選擇排序法(Select Sort) | YCC1203&#39;s Blog</title>
+        <title>大樂透 | YCC1203&#39;s Blog</title>
         <meta name="author" content="YCC1203" />
         <meta name="description" content="" />
         <meta name="keywords" content="" />
@@ -152,14 +152,14 @@
                 <div id="main" v-show="!loading">
                     <div class="article">
     <div>
-        <h1>選擇排序法(Select Sort)</h1>
+        <h1>大樂透</h1>
     </div>
     <div class="info">
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2023/5/29
+            2023/5/30
         </span>
         
         <span class="category">
@@ -179,7 +179,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/%E6%8E%92%E5%BA%8F%E6%B3%95/" style="color: #ffa2c4">排序法</a>
+                <a href="/tags/%E5%A4%A7%E6%A8%82%E9%80%8F/" style="color: #ffa2c4">大樂透</a>
             </span>
             
         </span>
@@ -187,53 +187,88 @@
     </div>
     
     <div class="content" v-pre>
-        <blockquote>
-<h3 id="運作原理"><a href="#運作原理" class="headerlink" title="運作原理"></a><font color=LightCoral>運作原理</font></h3><p>　　　選擇排序法 selection sort 的原理是先在所有資料中挑選出一個最小的數值放在放在第一個，再從第二個到尾<br>　　　端的資料中挑選出一個最小的數值放在第二個，這樣一直迭代下去，最終將能獲得排序好的升序串列(由小到大)</p>
-</blockquote>
+        <h3 id="抽籤-x2F-取亂數"><a href="#抽籤-x2F-取亂數" class="headerlink" title="抽籤&#x2F;取亂數"></a><font color=LightCoral>抽籤&#x2F;取亂數</font></h3><p>　　　大樂透最核心的部分其實就是產生一組兌獎號碼，雖然我沒辦法寫出一模一樣的程式，但是我可以簡單的模擬一下。</p>
 <hr>
-<h3 id="學習影片"><a href="#學習影片" class="headerlink" title="學習影片"></a><font color=LightCoral>學習影片</font></h3><p><a target="_blank" rel="noopener" href="https://youtu.be/bfn4cEgBgU4">109學年度資訊科技學科中心加深加廣課程影片_進階程式設計－搜尋排序</a></p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bfn4cEgBgU4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
+<h3 id="目標"><a href="#目標" class="headerlink" title="目標"></a><font color=LightCoral>目標</font></h3><p>　　　抽出十期對獎號碼，且使用者可以選擇期別和號碼查詢有無中獎，最後再詢問要不要繼續查詢</p>
 <hr>
 <h3 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼"></a><font color=LightCoral>程式碼</font></h3><pre><code>#include &lt;iostream&gt;
+#include &lt;time.h&gt;
+#include &lt;stdlib.h&gt; 
 
 using namespace std;
 
-void select(int *);
-void showdata(int *);
 int main()
 &#123;
-    int data[5] = &#123;55, 23, 87, 62, 16&#125;;
-    cout &lt;&lt; &quot;選擇排序法:\n原始資料為:&quot;;
-    showdata(data);
-    select(data);
-    cout &lt;&lt; &quot;排序後結果為:&quot;;
-    showdata(data);
-    return 0;
-&#125;
-
-void showdata(int data[]) &#123;
-    for(int i=0; i&lt;5; i++) 
-        cout &lt;&lt; &quot; &quot; &lt;&lt; data[i];
-    cout &lt;&lt; endl;
-&#125;
-void select(int data[]) &#123;
-    for(int i=0; i&lt;4; i++) &#123;
-        int pos= i;
-        for(int j = i+1; j&lt; 5; j++) &#123;
-            if(data[j] &lt; data[pos]) &#123;
-                pos = j;
+    int result[10][7];
+    
+    for(int i = 0; i &lt; 10; i++) &#123;
+        for(int j = 0; j &lt; 7; j++) &#123;
+            result[i][j] = 0;
+        &#125;
+    &#125;
+    
+    for(int i = 0; i &lt; 10; i++) &#123;
+        for(int j = 0; j &lt; 7; j++) &#123;
+            result[i][j] = rand() % 50 + 1;    //取亂數
+            
+            for(int k = 0; k &lt; j; k++) &#123;              //不重複亂數
+                if(result[i][j] == result[i][k]) &#123;   
+                    j--;
+                    break;
+                &#125;
             &#125;
         &#125;
-        int tmp;
-        tmp = data[i];
-        data[i] = data[pos];
-        data[pos] = tmp;
-        cout &lt;&lt; &quot;第&quot; &lt;&lt; i+1 &lt;&lt; &quot;次排序結果:&quot;;
-        showdata(data);
+    &#125;         
+    
+    for(int i = 0; i &lt; 10; i++) &#123;
+        for (int j = 0; j &lt; 5; j++) &#123;  
+            for (int k = 0; k &lt; 5-j; k++) &#123;
+                if(result[i][k] &gt; result[i][k+1]) swap(result[i][k], result[i][k+1]);        //泡沫排序    
+            &#125;
+        &#125;
+    &#125;
+    
+    for(int i = 0; i &lt; 10; i++) &#123;
+        cout &lt;&lt; &quot;第 &quot; &lt;&lt; i+1 &lt;&lt; &quot; 期中獎號碼:&quot;;
+        for(int j = 0; j &lt; 6; j++) &#123;
+            cout &lt;&lt; result[i][j] &lt;&lt; &quot; \t&quot;;
+        &#125;
+        cout &lt;&lt; &quot;特別號: &quot; &lt;&lt; result[i][6] &lt;&lt; endl;  //列出每一期號碼
+        
+    &#125;
+    char yn = &#39;y&#39;;
+    while(yn == &#39;y&#39; || yn == &#39;Y&#39;) &#123;         //如果輸入y或Y就繼續詢問
+        cout &lt;&lt; &quot;\n請問要查詢第幾期\n&quot;;
+        
+        int w,number;     //輸入期別 號碼
+        cin &gt;&gt; w;
+        
+        cout &lt;&lt; &quot;請問要查詢什麼號碼\n&quot;;
+        cin &gt;&gt; number;
+        
+        for(int i = 0; i &lt; 7; i++) &#123;               //判斷有沒有中獎
+            if(result[w-1][i] == number) &#123; 
+                cout &lt;&lt; &quot;第&quot; &lt;&lt; w &lt;&lt; &quot;期中獎號碼/ &quot; &lt;&lt; number &lt;&lt; &quot;:中獎\n是否要繼續(Y/N)&quot;; break;&#125;
+            else &#123;
+                cout &lt;&lt; &quot;第&quot; &lt;&lt; w &lt;&lt; &quot;期中獎號碼/ &quot; &lt;&lt; number &lt;&lt; &quot;:未中獎\n是否要繼續(Y/N)&quot;; break;&#125;
+        &#125;
+        
+        cin &gt;&gt; yn;          //如果輸入的字不對就重新輸入
+        while(yn != &#39;y&#39; &amp;&amp; yn != &#39;Y&#39; &amp;&amp; yn != &#39;n&#39; &amp;&amp; yn != &#39;N&#39;) &#123;
+            cout &lt;&lt; &quot;請重新輸入(Y/N)\n&quot;;
+            cin &gt;&gt; yn;
+        &#125;
     &#125;
 &#125;
 </code></pre>
+<hr>
+<h3 id="運作原理"><a href="#運作原理" class="headerlink" title="運作原理"></a><font color=LightCoral>運作原理</font></h3><ol>
+<li>宣告一個大小為 10 * 7 的二維陣列，用來儲存每期七個號碼共十期</li>
+<li>把時間當作rand()函式的亂數種子，生成每期不重複亂數共十期  範圍:1~50</li>
+<li>利用泡沫排序法把每期的前六個數字由小到大排序，第七個數字當作特別號</li>
+<li>列出每一期的號碼</li>
+<li>輸入欲查詢的期別與號碼，如果文字輸入錯誤要求重新輸入，大小寫皆可</li>
+</ol>
 
     </div>
     
