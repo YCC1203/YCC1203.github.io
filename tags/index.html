@@ -152,7 +152,7 @@
         
         
         <span>
-            <a href="/tags/%E6%90%9C%E5%B0%8B%E6%B3%95/" style="background: #ff7d73">
+            <a href="/tags/%E6%90%9C%E5%B0%8B%E6%B3%95/" style="background: #ffa2c4">
                 <span class="icon">
                     <i class="fa-solid fa-tags fa-fw"></i>
                 </span>
@@ -163,7 +163,7 @@
         
         
         <span>
-            <a href="/tags/%E6%8E%92%E5%BA%8F%E6%B3%95/" style="background: #ff7d73">
+            <a href="/tags/%E6%8E%92%E5%BA%8F%E6%B3%95/" style="background: #ffa2c4">
                 <span class="icon">
                     <i class="fa-solid fa-tags fa-fw"></i>
                 </span>
@@ -174,7 +174,7 @@
         
         
         <span>
-            <a href="/tags/%E5%A0%86%E7%96%8A%E4%BD%87%E5%88%97/" style="background: #03a9f4">
+            <a href="/tags/%E5%A0%86%E7%96%8A%E4%BD%87%E5%88%97/" style="background: #00bcd4">
                 <span class="icon">
                     <i class="fa-solid fa-tags fa-fw"></i>
                 </span>
@@ -228,6 +228,22 @@
         </div>
         <script src="/js/main.js"></script>
         
+
+        <canvas
+            id="fireworks"
+            style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 32767"
+        ></canvas>
+        <script src="https://cdn.staticfile.org/animejs/3.2.1/anime.min.js"></script>
+        <script src="/js/fireworks.min.js"></script>
+
+        <canvas
+            id="background"
+            style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: -1"
+        ></canvas>
+        <script src="/js/background.min.js"></script>
+
+        <div id="cursor"></div>
+        <link rel="stylesheet" href="/css/cursor.min.css" />
+        <script src="/js/cursor.min.js"></script>
     </body>
 </html>
-
