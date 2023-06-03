@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>tags | YCC1203&#39;s Blog</title>
+        <title>python | YCC1203&#39;s Blog</title>
         <meta name="author" content="YCC1203" />
         <meta name="description" content="" />
         <meta name="keywords" content="" />
@@ -32,6 +32,10 @@
 
 
 <script src="/js/lib/preview.js"></script>
+
+
+
+
 
 
 
@@ -146,66 +150,101 @@
 
             <transition name="into">
                 <div id="main" v-show="!loading">
-                    <div id="archives">
-    
-    <div class="categories-tags">
+                    <div class="article">
+    <div>
+        <h1>python</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/6/3
+        </span>
         
-        
-        <span>
-            <a href="/tags/%E6%90%9C%E5%B0%8B%E6%B3%95/" style="background: #03a9f4">
+        <span class="category">
+            <a href="/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/">
                 <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
                 </span>
-                搜尋法
+                程式筆記
             </a>
         </span>
         
         
-        
-        <span>
-            <a href="/tags/%E6%8E%92%E5%BA%8F%E6%B3%95/" style="background: #00a596">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                排序法
-            </a>
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/python/" style="color: #03a9f4">python</a>
+            </span>
+            
         </span>
-        
-        
-        
-        <span>
-            <a href="/tags/%E5%A0%86%E7%96%8A%E4%BD%87%E5%88%97/" style="background: #00a596">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                堆疊佇列
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/%E5%A4%A7%E6%A8%82%E9%80%8F/" style="background: #03a9f4">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                大樂透
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/python/" style="background: #ff7d73">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                python
-            </a>
-        </span>
-        
         
     </div>
+    
+    <div class="content" v-pre>
+        <h1 id="python初學"><a href="#python初學" class="headerlink" title="python初學"></a>python初學</h1><pre><code class="python">print(&quot;hello world&quot;)
+
+name = &quot;YCC&quot;
+print(name + &quot;今年高三&quot;)
+
+#清除指令 cls
+
+#變數
+num = 25
+st = &quot;YCC1203&quot;
+bo = True
+#字串用法
+
+print(&quot;hello \nMr.Chen&quot;)
+print(&quot;hello \&quot;Mr.Chen&quot;)
+##函式
+
+phrase = &quot;hello Mr.Chen&quot;
+print(phrase.lower())   #換大寫
+print(phrase.upper())   #換小寫
+print(phrase.isupper())   #判斷是否全大寫
+print(phrase.islower())   #判斷是否全小寫
+print(phrase.upper().isupper())
+print(phrase[0])    #0123456789
+print(phrase.index(&quot;h&quot;))
+print(phrase.replace(&quot;h&quot;, &quot;n&quot;))   #替換
+
+#數字用法
+num = -5
+print(55)
+print(8/5)
+print(8//5)
+print((8 + 8) * 5)
+print(num + 5)
+print(num % 5)
+print(&quot;會印出數字&quot; + str(num))   #轉型
+print(abs(num))   #絕對值
+print(pow(2,4))   #次方
+print(max(2,465,5453,32))   #最大值 不限制幾個參數
+print(min(2,465,5453,32))   #最小值 不限制幾個參數
+print(round(4.5))   #四捨五入
+from math import *
+print(floor(5.1))   #無條件捨去
+print(ceil(5.1))    #無條件進入
+print(sqrt(36))     #開根號
+</code></pre>
+
+    </div>
+    
+    
+    
+    
+    <div id="comment">
+        <div id="giscus-container" class="giscus"></div>
+    </div>
+    
+    
+    
     
 </div>
 
@@ -238,6 +277,29 @@
             
         </div>
         <script src="/js/main.js"></script>
+        
+        
+<script
+    src="https://giscus.app/client.js"
+    data-repo="YCC1203/YCC1203.github.io"
+    data-repo-id="R_kgDOJifRFA"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOJifRFM4CW3Hj"
+    data-mapping="url"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="light"
+    data-lang="zh-TW"
+    crossorigin
+    async
+></script>
+
+
+
+
+
         
 
         <canvas
