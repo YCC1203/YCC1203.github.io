@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>categories | YCC1203&#39;s Blog</title>
+        <title>Python初學 III | YCC1203&#39;s Blog</title>
         <meta name="author" content="YCC1203" />
         <meta name="description" content="" />
         <meta name="keywords" content="" />
@@ -32,6 +32,10 @@
 
 
 <script src="/js/lib/preview.js"></script>
+
+
+
+
 
 
 
@@ -146,13 +150,20 @@
 
             <transition name="into">
                 <div id="main" v-show="!loading">
-                    <div id="archives">
-    
-    <div class="categories-tags">
+                    <div class="article">
+    <div>
+        <h1>Python初學 III</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/6/4
+        </span>
         
-        
-        <span>
-            <a href="/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/" style="background: #00bcd4">
+        <span class="category">
+            <a href="/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/">
                 <span class="icon">
                     <i class="fa-solid fa-bookmark fa-fw"></i>
                 </span>
@@ -161,7 +172,118 @@
         </span>
         
         
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/Python/" style="color: #00bcd4">Python</a>
+            </span>
+            
+        </span>
+        
     </div>
+    
+    <div class="content" v-pre>
+        <h2 id="函式"><a href="#函式" class="headerlink" title="函式"></a>函式</h2><pre><code class="python">#函式 function
+def test():         #定義
+    print(&quot;hello&quot;)
+test()              #呼叫
+
+def test1(name, age):    #有傳入值
+    print(&quot;hello&quot; + name + &quot;你今年&quot; + str(age) + &quot;歲&quot;)
+test1(&quot;Oscar&quot; , 17)
+
+def add(num1, num2):
+    print(num1 + num2)
+add(2,3)
+
+def add1(num3, num4):
+    return num3 + num4    #return會覆蓋掉呼叫
+print(add1(2,3))           #需要return的原因是因為後續還有很多處理
+
+def add2(num5, num6):
+    print(num5 + num6)
+    return 10
+value = add2(2,3)
+print(value)             #輸出5,10
+
+def add2(num5, num6):
+    print(num5 + num6)
+    
+value = add2(2,3)
+print(value)             #輸出5, None
+</code></pre>
+<h2 id="if判斷句"><a href="#if判斷句" class="headerlink" title="if判斷句"></a>if判斷句</h2><pre><code class="python">#if判斷句
+## if
+hungry = True
+if hungry:
+    print(&quot;我就去吃飯&quot;)
+
+## if else
+rainy = False
+if rainy:
+    print(&quot;我就不去學校&quot;)
+else:
+    print(&quot;我就去學校上課&quot;)
+
+## if else elif
+score = 100
+if score == 100:
+    print(&quot;我給你1000元&quot;)
+elif score &gt;= 80:
+    print(&quot;我給你100元&quot;)
+else:
+    print(&quot;你給我100元&quot;)
+
+## and
+score = 100 
+rainy = True
+if rainy and score == 100:
+    print(&quot;我給你1000元&quot;)
+else:
+    print(&quot;你給我100元&quot;)
+
+## or
+score = 90 
+rainy = True
+if rainy or score == 100:
+    print(&quot;我給你1000元&quot;)
+else:
+    print(&quot;你給我100元&quot;)
+
+## not
+score = 90 
+rainy = True
+if not(rainy) or score != 100:
+    print(&quot;我給你1000元&quot;)
+else:
+    print(&quot;你給我100元&quot;)
+
+## 結合函式 練習判斷最大值
+def max_num(num1, num2, num3):
+    if num1&gt;=num2 and num1&gt;=num3:
+        return num1
+    elif num2&gt;=num1 and num2&gt;=num3:
+        return num2
+    else:
+        return num3
+print(max_num(2, 3, 5))
+</code></pre>
+
+    </div>
+    
+    
+    
+    
+    <div id="comment">
+        <div id="giscus-container" class="giscus"></div>
+    </div>
+    
+    
+    
     
 </div>
 
@@ -194,6 +316,29 @@
             
         </div>
         <script src="/js/main.js"></script>
+        
+        
+<script
+    src="https://giscus.app/client.js"
+    data-repo="YCC1203/YCC1203.github.io"
+    data-repo-id="R_kgDOJifRFA"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOJifRFM4CW3Hj"
+    data-mapping="url"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="light"
+    data-lang="zh-TW"
+    crossorigin
+    async
+></script>
+
+
+
+
+
         
 
         <canvas

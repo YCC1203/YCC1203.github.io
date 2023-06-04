@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>categories | YCC1203&#39;s Blog</title>
+        <title>YCC1203&#39;s Blog</title>
         <meta name="author" content="YCC1203" />
         <meta name="description" content="" />
         <meta name="keywords" content="" />
@@ -36,6 +36,8 @@
 
 
 
+
+<script src="/js/lib/home.js"></script>
 
 <link rel="stylesheet" href="/css/main.css" />
 
@@ -146,13 +148,34 @@
 
             <transition name="into">
                 <div id="main" v-show="!loading">
-                    <div id="archives">
-    
-    <div class="categories-tags">
+                    <div id="home-head">
+    <div id="home-background" ref="homeBackground" data-images="/images/1.jpg,/images/2.jpg,/images/3.jpg,/images/4.jpeg,/images/5.png,/images/6.png,/images/7.jpg,/images/8.png,/images/9.jpg,/images/10.png,/images/11.jpg,/images/12.png,/images/13.png,/images/14.jpg,/images/15.png,/images/16.jpg,/images/17.jpeg,/images/18.jpg,/images/19.png,/images/20.png,/images/21.png,/images/22.jpg,/images/23.jpg,/images/24.jpeg"></div>
+    <div id="home-info" @click="homeClick">
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="info">
+            <div class="wrap">
+                <h1>YCC1203&#39;s Blog</h1>
+                <h3></h3>
+                <h5></h5>
+            </div>
+        </span>
+    </div>
+</div>
+<div id="home-posts-wrap"  ref="homePostsWrap">
+    <div id="home-posts">
         
+
+<div class="post">
+    <a href="/2023/05/29/Stack/">
+        <h2 class="post-title">堆疊(Stack)</h2>
+    </a>
+    <div class="category-and-date">
         
-        <span>
-            <a href="/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/" style="background: #00bcd4">
+        <span class="category">
+            <a href="/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/">
                 <span class="icon">
                     <i class="fa-solid fa-bookmark fa-fw"></i>
                 </span>
@@ -160,7 +183,182 @@
             </a>
         </span>
         
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/5/29
+        </span>
         
+        
+        <span class="special">
+            <i class="fa-solid fa-grip-vertical fa-fw"></i>
+        </span>
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>堆疊具有後進先出(LIFO)的特性，堆疊有兩大基本動作：push、pop，當需要加入資料到頂端時可以使用push，而當需要移除資料時，可以使用pop將資料從頂端移除。</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/%E5%A0%86%E7%96%8A%E4%BD%87%E5%88%97/" style="color: #00a596">堆疊佇列</a>
+        </span>
+        
+    </div>
+    <a href="/2023/05/29/Stack/" class="go-post">閱讀全文</a>
+</div>
+
+<div class="post">
+    <a href="/2023/05/28/Linear-Search/">
+        <h2 class="post-title">線性搜尋法(Linear Search)</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                程式筆記
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/5/28
+        </span>
+        
+        
+        <span class="special">
+            <i class="fa-solid fa-grip-vertical fa-fw"></i>
+        </span>
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>又稱循序搜尋法，是最簡單的搜尋法。原理是在資料列中從頭開始逐一的搜尋，一筆一筆的資料值與搜尋目標值做比對，直到找到為止。</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/%E6%90%9C%E5%B0%8B%E6%B3%95/" style="color: #ffa2c4">搜尋法</a>
+        </span>
+        
+    </div>
+    <a href="/2023/05/28/Linear-Search/" class="go-post">閱讀全文</a>
+</div>
+
+
+        <div class="page-current">
+    <div class="prev">
+        
+        <a class="page-num" href="/">
+            <i class="fa-solid fa-caret-left fa-fw"></i>
+        </a>
+        
+    </div>
+    <div class="page-index">
+        
+        <span>
+            
+            
+            <a class="page-num" href="/">1</a>
+        </span>
+        
+        <span class="current">2</span>
+        
+    </div>
+    <div class="next">
+        
+    </div>
+</div>
+
+    </div>
+    
+    <div id="home-card">
+        <div id="card-div">
+    <div class="card-style">
+        <div class="avatar">
+            <img src="/images/avatar1.png" alt="avatar" />
+        </div>
+        <div class="name">YCC1203</div>
+        <div class="description">
+            <p>剛進入新手村www</p>
+
+        </div>
+        
+        <div class="icon-links">
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://www.instagram.com/zlcsc_627sof/">
+                    <i
+                        class="fa-brands fa-instagram fa-fw"
+                    ></i>
+                </a>
+            </span>
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://github.com/YCC1203">
+                    <i
+                        class="fa-brands fa-github fa-fw"
+                    ></i>
+                </a>
+            </span>
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://www.facebook.com/profile.php?id=100009009246478">
+                    <i
+                        class="fa-brands fa-facebook fa-fw"
+                    ></i>
+                </a>
+            </span>
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://osu.ppy.sh/users/24565338">
+                    <i
+                        class="fa-solid fa-gamepad fa-fw"
+                    ></i>
+                </a>
+            </span>
+            
+        </div>
+        
+        
+        <div class="friend-links">
+            
+            <div class="friend-link">
+                <a target="_blank" rel="noopener" href="https://argvchs.github.io">Argvchs</a>
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
+
     </div>
     
 </div>

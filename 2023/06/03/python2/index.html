@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>python初學 II | YCC1203&#39;s Blog</title>
+        <title>Python初學 II | YCC1203&#39;s Blog</title>
         <meta name="author" content="YCC1203" />
         <meta name="description" content="" />
         <meta name="keywords" content="" />
@@ -152,7 +152,7 @@
                 <div id="main" v-show="!loading">
                     <div class="article">
     <div>
-        <h1>python初學 II</h1>
+        <h1>Python初學 II</h1>
     </div>
     <div class="info">
         <span class="date">
@@ -179,7 +179,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/python/" style="color: #03a9f4">python</a>
+                <a href="/tags/Python/" style="color: #00bcd4">Python</a>
             </span>
             
         </span>
@@ -187,7 +187,7 @@
     </div>
     
     <div class="content" v-pre>
-        <pre><code class="python">#建立一個基本計算機
+        <h2 id="基本計算機"><a href="#基本計算機" class="headerlink" title="基本計算機"></a>基本計算機</h2><pre><code class="python">#建立一個基本計算機
 number1 = input(&quot;請輸入第一個數字:&quot;)
 number2 = input(&quot;請輸入第二個數字:&quot;)
 print(number1 + number2)    #字串的相加
@@ -199,8 +199,23 @@ print(int(number3) + int(number4))    #小數點會出錯
 number5 = input(&quot;請輸入第一個數字:&quot;)
 number6 = input(&quot;請輸入第二個數字:&quot;)
 print(float(number5) + float(number6))    #最終
-
-#列表list
+</code></pre>
+<h2 id="正常計算機"><a href="#正常計算機" class="headerlink" title="正常計算機"></a>正常計算機</h2><pre><code class="python">#進階計算機
+num1 = float(input(&quot;請輸入第一個數&quot;))
+op = input(&quot;請輸入運算符號&quot;)
+num2 = float(input(&quot;請輸入第二個數&quot;))
+if op == &quot;+&quot;:
+    print(num1 + num2)
+elif op == &quot;-&quot;:
+    print(num1 - num2)
+elif op == &quot;*&quot;:
+    print(num1 * num2)
+elif op == &quot;/&quot;:
+    print(num1 / num2)
+else:
+    print(&quot;不支援的運算符號&quot;)
+</code></pre>
+<h2 id="列表List"><a href="#列表List" class="headerlink" title="列表List"></a>列表List</h2><pre><code class="python">#列表list
 scores = [90, 70, 60, 50, 30]
 friends = [&quot;Andy&quot;, &quot;Joy&quot;, &quot;Oscar&quot;]
 things = [90, &quot;Joy&quot;, True]
@@ -224,8 +239,8 @@ scores.sort()            #List由小到大排列
 scores.reverse()         #List反轉
 scores.index(70)         #找到70的位置
 scores.count(70)         #找出有幾個70
-
-#元族
+</code></pre>
+<h2 id="元族"><a href="#元族" class="headerlink" title="元族"></a>元族</h2><pre><code class="python">#元族
 scores = (90, 70, 60, 50, 30)
 print(scores[0])
 print(scores[-1])
@@ -238,7 +253,10 @@ print(len(scores))       #元族長度
 scores[0] = 8            #不能修改
 </code></pre>
 <hr>
-<ul>
+<h2 id="重點整理"><a href="#重點整理" class="headerlink" title="重點整理"></a>重點整理</h2><ul>
+<li>Python的列表從第0項開始</li>
+<li>[1:3]代表從第1項到第3項但不包括第3項</li>
+<li>[-1]代表倒數第1項</li>
 <li>元族跟列表的差別在於 元族一旦創建就不能增加、修改、創建</li>
 </ul>
 
