@@ -1,6 +1,7 @@
 ---
 title: Python初學 IV
 date: 2023-06-04
+updated: 2026-09-28
 categories:
   - 程式筆記
 tags:

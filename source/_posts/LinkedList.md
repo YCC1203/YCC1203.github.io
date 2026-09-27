@@ -1,6 +1,7 @@
 ---
 title: 鏈結串列(LinkedList)
 date: 2023-05-29
+updated: 2026-09-28
 categories:
   - 程式筆記
 description: 鏈結串列 LinkedList 的基本概念，以及節點新增、插入、刪除與走訪操作

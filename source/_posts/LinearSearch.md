@@ -1,6 +1,7 @@
 ---
 title: 線性搜尋法(Linear Search)
 date: 2023-05-28
+updated: 2026-09-28
 categories:
   - 程式筆記
 tags:

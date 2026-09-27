@@ -53,6 +53,10 @@ menu:
         name: id-card
         theme: solid
         link: /about
+    Projects:
+        name: code
+        theme: solid
+        link: /projects
     Archives:
         name: box-archive
         theme: solid

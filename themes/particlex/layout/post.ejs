@@ -7,8 +7,17 @@
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            <%= date(page.date, "YYYY/M/D") %>
+            發布：<%= date(page.date, "YYYY/M/D") %>
         </span>
+
+        <% if (page.updated && date(page.updated, "YYYY/M/D") !== date(page.date, "YYYY/M/D")) { %>
+        <span class="updated">
+            <span class="icon">
+                <i class="fa-solid fa-rotate fa-fw"></i>
+            </span>
+            更新：<%= date(page.updated, "YYYY/M/D") %>
+        </span>
+        <% } %>
         <% if (page.categories && page.categories.data.length !== 0) { %>
         <span class="category">
             <a href="<%- url_for(page.categories.data[0].path) %>">
@@ -56,8 +65,19 @@
         <div class="content" ref="content" v-show="cryptoStatus === 'success'"></div>
     </transition>
     <% } else { %>
-    <div class="content" v-pre>
-        <%- page.content %>
+    <div class="article-layout">
+        <div class="article-main">
+            <div class="content" v-pre>
+                <%- page.content %>
+            </div>
+        </div>
+
+        <% if (is_post()) { %>
+        <aside id="toc">
+            <div class="toc-title">目錄</div>
+            <div class="toc-content"></div>
+        </aside>
+        <% } %>
     </div>
     <% } %>
     <% if (page.comments) { %>

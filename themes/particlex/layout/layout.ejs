@@ -26,8 +26,28 @@
     />
     <link rel="icon" href="<%- url_for(theme.avatar) %>" />
     <%- partial("import", { type }) %>
+    <%
+        const metaTitle = is_home() ? config.title : page.title + " | " + config.title;
+        const metaDescription = page.description || config.description || "YCC1203's Blog";
+        const metaUrl = config.url ? config.url + url_for(page.path || "/") : "";
+        const metaImage = config.url ? config.url + url_for("/images/og-image.jpg") : "";
+    %>
+
+    <meta property="og:title" content="<%- metaTitle %>" />
+    <meta property="og:description" content="<%- metaDescription %>" />
+    <meta property="og:type" content="<%= is_post() ? 'article' : 'website' %>" />
+    <meta property="og:url" content="<%- metaUrl %>" />
+    <meta property="og:image" content="<%- metaImage %>" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="<%- metaTitle %>" />
+    <meta name="twitter:description" content="<%- metaDescription %>" />
+    <meta name="twitter:image" content="<%- metaImage %>" />
 </head>
 <body>
+    <% if (is_post()) { %>
+    <div id="reading-progress"></div>
+    <% } %>
     <div id="layout">
         <transition name="fade">
             <div id="loading" v-show="loading">
@@ -77,5 +97,27 @@
     <div id="cursor"></div>
     <link rel="stylesheet" href="<%- url_for('/css/cursor.min.css') %>" />
     <script src="<%- url_for('/js/cursor.min.js') %>"></script>
+
+    <% if (is_post()) { %>
+    <script src="<%- url_for('/js/toc.js') %>"></script>
+    <% } %>
+
+    <!-- 回到頂部按鈕 -->
+    <button id="back-to-top" aria-label="回到頂部">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="<%- url_for('/js/back-to-top.js') %>"></script>
+
+    <% if (is_post()) { %>
+    <script src="<%- url_for('/js/reading-progress.js') %>"></script>
+    <% } %>
+
+    <!-- 深色模式切換 -->
+    <button id="theme-toggle" aria-label="切換深色模式">
+    <i class="fa-solid fa-moon"></i>
+    </button>
+
+    <script src="<%- url_for('/js/theme-toggle.js') %>"></script>
 </body>
 </html>

@@ -1,6 +1,7 @@
 ---
 title: 堆疊(Stack)
 date: 2023-05-29
+updated: 2026-09-28
 categories:
   - 程式筆記
 tags:
