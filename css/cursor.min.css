@@ -1,0 +1,33 @@
+html,
+body,
+a,
+button,
+input,
+textarea,
+select {
+    cursor: none !important;
+}
+
+#cursor {
+    position: fixed;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow:
+        0 0 8px rgba(255, 255, 255, 0.9),
+        0 0 16px rgba(255, 180, 220, 0.8);
+    pointer-events: none;
+    z-index: 99999;
+    transform: translate(-50%, -50%);
+    transition:
+        width 0.12s ease,
+        height 0.12s ease,
+        background 0.12s ease;
+}
+
+#cursor.active {
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 160, 210, 0.7);
+}
