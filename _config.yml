@@ -96,4 +96,6 @@ theme: particlex
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  repo: https://github.com/YCC1203/YCC1203.github.io.git
+  branch: master
