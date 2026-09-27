@@ -973,3 +973,20 @@ ol li {
         padding-left: 20px;
     }
 }
+/* 程式碼區塊字型與排版微調 */
+pre,
+code,
+.hljs {
+    font-family: Consolas, "Courier New", monospace !important;
+}
+
+pre code,
+.hljs {
+    font-size: 15px !important;
+    line-height: 1.75 !important;
+    letter-spacing: 0 !important;
+}
+
+pre {
+    tab-size: 4;
+}

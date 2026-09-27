@@ -15,6 +15,7 @@ mixins.highlight = {
             for (let i of codes) {
                 let code = i.textContent;
                 let language = [...i.classList, ...i.firstChild.classList][0] || "plaintext";
+                language = language.replace(/^language-/, "");
                 let highlighted;
                 try {
                     highlighted = hljs.highlight(code, { language }).value;
