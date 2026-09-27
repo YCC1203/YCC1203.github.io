@@ -6,7 +6,9 @@
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
-    "server": "hexo server"
+    "server": "hexo server",
+    "optimize-images": "node tools/convert-backgrounds.js",
+    "prepare-blog": "npm run optimize-images && hexo clean && hexo generate"
   },
   "hexo": {
     "version": "8.1.2"
@@ -23,5 +25,8 @@
     "hexo-renderer-stylus": "^3.0.1",
     "hexo-server": "^3.0.0",
     "hexo-theme-landscape": "^1.0.0"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.5"
   }
 }

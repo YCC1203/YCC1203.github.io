@@ -5,31 +5,31 @@
 avatar: /images/IMG_1030.jpg
 
 background:
-    - /images/1.jpg
-    - /images/2.jpg
-    - /images/3.jpg
-    - /images/4.jpeg
-    - /images/5.png
-    - /images/6.png
-    - /images/7.jpg
-    - /images/8.png
-    - /images/9.jpg
-    - /images/10.png
-    - /images/11.jpg
-    - /images/12.png
-    - /images/13.png
-    - /images/14.jpg
-    - /images/15.png
-    - /images/16.jpg
-    - /images/17.jpeg
-    - /images/18.jpg
-    - /images/19.png
-    - /images/20.png
-    - /images/21.png
-    - /images/22.jpg
-    - /images/23.jpg
-    - /images/24.jpeg
-    - /images/25.jpg
+    - /images/backgrounds/1.webp
+    - /images/backgrounds/2.webp
+    - /images/backgrounds/3.webp
+    - /images/backgrounds/4.webp
+    - /images/backgrounds/5.webp
+    - /images/backgrounds/6.webp
+    - /images/backgrounds/7.webp
+    - /images/backgrounds/8.webp
+    - /images/backgrounds/9.webp
+    - /images/backgrounds/10.webp
+    - /images/backgrounds/11.webp
+    - /images/backgrounds/12.webp
+    - /images/backgrounds/13.webp
+    - /images/backgrounds/14.webp
+    - /images/backgrounds/15.webp
+    - /images/backgrounds/16.webp
+    - /images/backgrounds/17.webp
+    - /images/backgrounds/18.webp
+    - /images/backgrounds/19.webp
+    - /images/backgrounds/20.webp
+    - /images/backgrounds/21.webp
+    - /images/backgrounds/22.webp
+    - /images/backgrounds/23.webp
+    - /images/backgrounds/24.webp
+    - /images/backgrounds/25.webp
 
 loading: /images/loading.gif
 # Optional colors for category and tag
@@ -98,7 +98,7 @@ footer:
 # Polyfill
 # https://polyfill.io
 polyfill:
-    enable: true
+    enable: false
     features:
         - default
 

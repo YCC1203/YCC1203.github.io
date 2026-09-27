@@ -10,12 +10,10 @@ const app = Vue.createApp({
             renderers: [],
         };
     },
-    created() {
-        window.addEventListener("load", () => {
-            this.loading = false;
-        });
-    },
+    
     mounted() {
+        this.loading = false;
+
         window.addEventListener("scroll", this.handleScroll, true);
         this.render();
     },
