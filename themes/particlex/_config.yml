@@ -2,7 +2,7 @@
 # https://github.com/theme-particlex/hexo-theme-particlex
 
 # Avatar image
-avatar: /images/avatar1.png
+avatar: /images/IMG_1030.jpg
 
 background:
     - /images/1.jpg
@@ -70,26 +70,17 @@ menu:
 card:
     enable: true
     description: |
-        剛進入新手村www
+        想像不到未來的自己可以幹嘛...
     iconLinks:
-        Instagram:
-            name: instagram
-            theme: brands
-            link: https://www.instagram.com/zlcsc_627sof/
         GitHub:
             name: github
             theme: brands
             link: https://github.com/YCC1203
-        Facebook:
-            name: facebook
-            theme: brands
-            link: https://www.facebook.com/profile.php?id=100009009246478
         osu!:
             name: gamepad
             theme: solid
             link: https://osu.ppy.sh/users/24565338
     friendLinks:
-        Argvchs: https://argvchs.github.io
 
 # Footer info
 footer:
