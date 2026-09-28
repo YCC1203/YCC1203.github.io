@@ -3,6 +3,15 @@
 <html lang="zh-TW">
 <head>
     <meta charset="utf-8" />
+    <script>
+        try {
+            const savedTheme = localStorage.getItem("theme");
+
+            if (savedTheme === "dark") {
+                document.documentElement.classList.add("dark-mode");
+            }
+        } catch (e) {}
+    </script>
     <title>泡沫排序法(Bubble Sort) | ychen&#39;s Blog</title>
     <meta name="author" content="YCC1203" />
     <meta name="description" content="" />
@@ -234,7 +243,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/%E6%8E%92%E5%BA%8F%E6%B3%95/" style="color: #03a9f4">
+                <a href="/tags/%E6%8E%92%E5%BA%8F%E6%B3%95/" style="color: #00bcd4">
                     排序法
                 </a>
             </span>
@@ -323,34 +332,34 @@ int main()
             
 
                 
-
-                <a
-                    class="post-series-item"
-                    href="/2023/05/29/InsertSort/"
-                >
-                    <span class="series-number">
-                        1
-                    </span>
-
-                    <span>
-                        插入排序法(InsertSort)
-                    </span>
-                </a>
-
-                
-
-            
-
-                
                 <div class="post-series-item current">
                     <span class="series-number">
-                        2
+                        1
                     </span>
 
                     <span>
                         泡沫排序法(Bubble Sort)
                     </span>
                 </div>
+
+                
+
+            
+
+                
+
+                <a
+                    class="post-series-item"
+                    href="/2023/05/29/InsertSort/"
+                >
+                    <span class="series-number">
+                        2
+                    </span>
+
+                    <span>
+                        插入排序法(InsertSort)
+                    </span>
+                </a>
 
                 
 
@@ -381,25 +390,25 @@ int main()
     <nav class="post-navigation">
 
         
-        <a class="post-nav-item prev" href="/2023/05/29/InsertSort/">
+        <a class="post-nav-item prev" href="/2023/05/30/keno/">
             <span class="post-nav-label">
                 <i class="fa-solid fa-arrow-left"></i>
                 上一篇
             </span>
             <span class="post-nav-title">
-                插入排序法(InsertSort)
+                大樂透
             </span>
         </a>
         
 
         
-        <a class="post-nav-item next" href="/2023/05/29/Queue/">
+        <a class="post-nav-item next" href="/2023/05/29/InsertSort/">
             <span class="post-nav-label">
                 下一篇
                 <i class="fa-solid fa-arrow-right"></i>
             </span>
             <span class="post-nav-title">
-                佇列(Queue)
+                插入排序法(InsertSort)
             </span>
         </a>
         
@@ -544,13 +553,17 @@ int main()
 
     <script src="/js/theme-toggle.js"></script>
 
-    <script src="/js/copy-code.js"></script>
-
-    <script src="/js/image-lightbox.js"></script>
-
     <script
         src="https://cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js"
         defer>
     </script>
+
+    <script src="/js/search-shortcut.js"></script>
+
+    
+    <script src="/js/copy-code.js"></script>
+    <script src="/js/heading-anchor.js"></script>
+    <script src="/js/image-lightbox.js"></script>
+    
 </body>
 </html>

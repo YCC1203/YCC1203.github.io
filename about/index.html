@@ -3,6 +3,15 @@
 <html lang="zh-TW">
 <head>
     <meta charset="utf-8" />
+    <script>
+        try {
+            const savedTheme = localStorage.getItem("theme");
+
+            if (savedTheme === "dark") {
+                document.documentElement.classList.add("dark-mode");
+            }
+        } catch (e) {}
+    </script>
     <title>About | ychen&#39;s Blog</title>
     <meta name="author" content="YCC1203" />
     <meta name="description" content="" />
@@ -320,13 +329,13 @@
 
     <script src="/js/theme-toggle.js"></script>
 
-    <script src="/js/copy-code.js"></script>
-
-    <script src="/js/image-lightbox.js"></script>
-
     <script
         src="https://cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js"
         defer>
     </script>
+
+    <script src="/js/search-shortcut.js"></script>
+
+    
 </body>
 </html>

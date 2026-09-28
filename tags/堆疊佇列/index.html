@@ -3,6 +3,15 @@
 <html lang="zh-TW">
 <head>
     <meta charset="utf-8" />
+    <script>
+        try {
+            const savedTheme = localStorage.getItem("theme");
+
+            if (savedTheme === "dark") {
+                document.documentElement.classList.add("dark-mode");
+            }
+        } catch (e) {}
+    </script>
     <title>Tags: 堆疊佇列 | ychen&#39;s Blog</title>
     <meta name="author" content="YCC1203" />
     <meta name="description" content="" />
@@ -181,11 +190,33 @@
         
         
         <span>
-            <a href="/tags/%E6%8E%92%E5%BA%8F%E6%B3%95/" style="background: #ffa2c4">
+            <a href="/tags/%E6%8E%92%E5%BA%8F%E6%B3%95/" style="background: #00bcd4">
                 <span class="icon">
                     <i class="fa-solid fa-tags fa-fw"></i>
                 </span>
                 排序法
+            </a>
+        </span>
+        
+        
+        
+        <span>
+            <a href="/tags/%E6%90%9C%E5%B0%8B%E6%B3%95/" style="background: #03a9f4">
+                <span class="icon">
+                    <i class="fa-solid fa-tags fa-fw"></i>
+                </span>
+                搜尋法
+            </a>
+        </span>
+        
+        
+        
+        <span>
+            <a href="/tags/%E5%A4%A7%E6%A8%82%E9%80%8F/" style="background: #ffa2c4">
+                <span class="icon">
+                    <i class="fa-solid fa-tags fa-fw"></i>
+                </span>
+                大樂透
             </a>
         </span>
         
@@ -205,33 +236,11 @@
         
         
         <span>
-            <a href="/tags/%E6%90%9C%E5%B0%8B%E6%B3%95/" style="background: #00bcd4">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                搜尋法
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/python/" style="background: #ffa2c4">
+            <a href="/tags/python/" style="background: #ff7d73">
                 <span class="icon">
                     <i class="fa-solid fa-tags fa-fw"></i>
                 </span>
                 python
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/%E5%A4%A7%E6%A8%82%E9%80%8F/" style="background: #00a596">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                大樂透
             </a>
         </span>
         
@@ -415,13 +424,13 @@
 
     <script src="/js/theme-toggle.js"></script>
 
-    <script src="/js/copy-code.js"></script>
-
-    <script src="/js/image-lightbox.js"></script>
-
     <script
         src="https://cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js"
         defer>
     </script>
+
+    <script src="/js/search-shortcut.js"></script>
+
+    
 </body>
 </html>

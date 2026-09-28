@@ -3,6 +3,15 @@
 <html lang="zh-TW">
 <head>
     <meta charset="utf-8" />
+    <script>
+        try {
+            const savedTheme = localStorage.getItem("theme");
+
+            if (savedTheme === "dark") {
+                document.documentElement.classList.add("dark-mode");
+            }
+        } catch (e) {}
+    </script>
     <title>Python初學 I | ychen&#39;s Blog</title>
     <meta name="author" content="YCC1203" />
     <meta name="description" content="" />
@@ -234,7 +243,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/python/" style="color: #00bcd4">
+                <a href="/tags/python/" style="color: #ffa2c4">
                     python
                 </a>
             </span>
@@ -323,14 +332,14 @@ print(sqrt(36))                     #開根號
 
                 <a
                     class="post-series-item"
-                    href="/2023/06/04/python2/"
+                    href="/2023/06/04/python3/"
                 >
                     <span class="series-number">
                         1
                     </span>
 
                     <span>
-                        Python初學 III
+                        Python初學 IV
                     </span>
                 </a>
 
@@ -342,14 +351,14 @@ print(sqrt(36))                     #開根號
 
                 <a
                     class="post-series-item"
-                    href="/2023/06/04/python3/"
+                    href="/2023/06/04/python2/"
                 >
                     <span class="series-number">
                         2
                     </span>
 
                     <span>
-                        Python初學 IV
+                        Python初學 III
                     </span>
                 </a>
 
@@ -397,13 +406,13 @@ print(sqrt(36))                     #開根號
     <nav class="post-navigation">
 
         
-        <a class="post-nav-item prev" href="/2023/06/04/python3/">
+        <a class="post-nav-item prev" href="/2023/06/04/python2/">
             <span class="post-nav-label">
                 <i class="fa-solid fa-arrow-left"></i>
                 上一篇
             </span>
             <span class="post-nav-title">
-                Python初學 IV
+                Python初學 III
             </span>
         </a>
         
@@ -560,13 +569,17 @@ print(sqrt(36))                     #開根號
 
     <script src="/js/theme-toggle.js"></script>
 
-    <script src="/js/copy-code.js"></script>
-
-    <script src="/js/image-lightbox.js"></script>
-
     <script
         src="https://cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js"
         defer>
     </script>
+
+    <script src="/js/search-shortcut.js"></script>
+
+    
+    <script src="/js/copy-code.js"></script>
+    <script src="/js/heading-anchor.js"></script>
+    <script src="/js/image-lightbox.js"></script>
+    
 </body>
 </html>

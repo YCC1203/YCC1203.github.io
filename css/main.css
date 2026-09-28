@@ -1163,6 +1163,11 @@ pre {
     transform: scale(1.08);
 }
 
+html.dark-mode,
+html.dark-mode body {
+    background: #181a1b;
+    color: #d7d7d7;
+}
 /* 深色模式 */
 body.dark-mode {
     background: #181a1b;
@@ -1795,5 +1800,61 @@ body.dark-mode .site-stat-label {
 @media (max-width: 600px) {
     .site-stats {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Heading Anchor */
+.heading-anchor {
+    margin-left: 8px;
+
+    padding: 2px 5px;
+
+    border: none;
+    background: transparent;
+
+    color: #9aa4ad;
+
+    font-size: 0.75em;
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    transition:
+        opacity 0.2s,
+        color 0.2s,
+        transform 0.2s;
+}
+
+.article .content h2:hover .heading-anchor,
+.article .content h3:hover .heading-anchor {
+    opacity: 1;
+}
+
+.heading-anchor:hover {
+    color: #66afef;
+    transform: scale(1.1);
+}
+
+.heading-anchor.copied {
+    color: #7bcf8e;
+}
+
+body.dark-mode .heading-anchor {
+    color: #888;
+}
+
+body.dark-mode .heading-anchor:hover {
+    color: #8fc7ff;
+}
+
+body.dark-mode .heading-anchor.copied {
+    color: #8bd49c;
+}
+
+/* 手機上直接顯示 */
+@media (max-width: 600px) {
+    .heading-anchor {
+        opacity: 0.65;
     }
 }

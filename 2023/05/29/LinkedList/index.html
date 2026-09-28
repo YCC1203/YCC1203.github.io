@@ -3,6 +3,15 @@
 <html lang="zh-TW">
 <head>
     <meta charset="utf-8" />
+    <script>
+        try {
+            const savedTheme = localStorage.getItem("theme");
+
+            if (savedTheme === "dark") {
+                document.documentElement.classList.add("dark-mode");
+            }
+        } catch (e) {}
+    </script>
     <title>鏈結串列(LinkedList) | ychen&#39;s Blog</title>
     <meta name="author" content="YCC1203" />
     <meta name="description" content="" />
@@ -452,25 +461,25 @@ void displayList(struct Node* node) {
     <nav class="post-navigation">
 
         
-        <a class="post-nav-item prev" href="/2023/05/29/SelectSort/">
+        <a class="post-nav-item prev" href="/2023/05/29/InsertSort/">
             <span class="post-nav-label">
                 <i class="fa-solid fa-arrow-left"></i>
                 上一篇
             </span>
             <span class="post-nav-title">
-                選擇排序法(Select Sort)
+                插入排序法(InsertSort)
             </span>
         </a>
         
 
         
-        <a class="post-nav-item next" href="/2023/05/29/Stack/">
+        <a class="post-nav-item next" href="/2023/05/29/SelectSort/">
             <span class="post-nav-label">
                 下一篇
                 <i class="fa-solid fa-arrow-right"></i>
             </span>
             <span class="post-nav-title">
-                堆疊(Stack)
+                選擇排序法(Select Sort)
             </span>
         </a>
         
@@ -615,13 +624,17 @@ void displayList(struct Node* node) {
 
     <script src="/js/theme-toggle.js"></script>
 
-    <script src="/js/copy-code.js"></script>
-
-    <script src="/js/image-lightbox.js"></script>
-
     <script
         src="https://cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js"
         defer>
     </script>
+
+    <script src="/js/search-shortcut.js"></script>
+
+    
+    <script src="/js/copy-code.js"></script>
+    <script src="/js/heading-anchor.js"></script>
+    <script src="/js/image-lightbox.js"></script>
+    
 </body>
 </html>

@@ -3,6 +3,15 @@
 <html lang="zh-TW">
 <head>
     <meta charset="utf-8" />
+    <script>
+        try {
+            const savedTheme = localStorage.getItem("theme");
+
+            if (savedTheme === "dark") {
+                document.documentElement.classList.add("dark-mode");
+            }
+        } catch (e) {}
+    </script>
     <title>Archives | ychen&#39;s Blog</title>
     <meta name="author" content="YCC1203" />
     <meta name="description" content="" />
@@ -179,7 +188,7 @@
             
 <div id="archives">
     
-    <input id="search-bar" class="input" placeholder="搜索" v-model="rawSearch" />
+    <input id="search-bar" class="input" placeholder="搜尋文章...  Ctrl + K" v-model="rawSearch" />
     
     <div id="timeline-wrap" ref="timeline">
         
@@ -210,7 +219,7 @@
                         
                         <span class="tag">
                             
-                            <a href="/tags/%E6%90%9C%E5%B0%8B%E6%B3%95/" style="color: #ff7d73">
+                            <a href="/tags/%E6%90%9C%E5%B0%8B%E6%B3%95/" style="color: #00bcd4">
                                 搜尋法
                             </a>
                         </span>
@@ -259,67 +268,6 @@
             </div>
         </div>
         
-        <div class="timeline" data-title="鏈結串列(linkedlist)">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2023/5/29</div>
-                <a href="/2023/05/29/LinkedList/">
-                    <h3>鏈結串列(LinkedList)</h3>
-                </a>
-                <div class="info">
-                    
-                    <span class="category">
-                        <a href="/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/">
-                            <span class="icon">
-                                <i class="fa-solid fa-bookmark fa-fw"></i>
-                            </span>
-                            程式筆記
-                        </a>
-                    </span>
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="選擇排序法(selectsort)">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2023/5/29</div>
-                <a href="/2023/05/29/SelectSort/">
-                    <h3>選擇排序法(Select Sort)</h3>
-                </a>
-                <div class="info">
-                    
-                    <span class="category">
-                        <a href="/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/">
-                            <span class="icon">
-                                <i class="fa-solid fa-bookmark fa-fw"></i>
-                            </span>
-                            程式筆記
-                        </a>
-                    </span>
-                    
-                    
-                    <span class="tags">
-                        <span class="icon">
-                            <i class="fa-solid fa-tags fa-fw"></i>
-                        </span>
-                        
-                        
-                        <span class="tag">
-                            
-                            <a href="/tags/%E6%8E%92%E5%BA%8F%E6%B3%95/" style="color: #ff7d73">
-                                排序法
-                            </a>
-                        </span>
-                        
-                    </span>
-                    
-                </div>
-            </div>
-        </div>
-        
         <div class="timeline" data-title="佇列(queue)">
             <div class="timeline-tail"></div>
             <div class="timeline-content">
@@ -358,12 +306,12 @@
             </div>
         </div>
         
-        <div class="timeline" data-title="泡沫排序法(bubblesort)">
+        <div class="timeline" data-title="選擇排序法(selectsort)">
             <div class="timeline-tail"></div>
             <div class="timeline-content">
                 <div class="item-time">2023/5/29</div>
-                <a href="/2023/05/29/BubbleSort/">
-                    <h3>泡沫排序法(Bubble Sort)</h3>
+                <a href="/2023/05/29/SelectSort/">
+                    <h3>選擇排序法(Select Sort)</h3>
                 </a>
                 <div class="info">
                     
@@ -385,12 +333,35 @@
                         
                         <span class="tag">
                             
-                            <a href="/tags/%E6%8E%92%E5%BA%8F%E6%B3%95/" style="color: #00bcd4">
+                            <a href="/tags/%E6%8E%92%E5%BA%8F%E6%B3%95/" style="color: #00a596">
                                 排序法
                             </a>
                         </span>
                         
                     </span>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline" data-title="鏈結串列(linkedlist)">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2023/5/29</div>
+                <a href="/2023/05/29/LinkedList/">
+                    <h3>鏈結串列(LinkedList)</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/">
+                            <span class="icon">
+                                <i class="fa-solid fa-bookmark fa-fw"></i>
+                            </span>
+                            程式筆記
+                        </a>
+                    </span>
+                    
                     
                 </div>
             </div>
@@ -423,7 +394,45 @@
                         
                         <span class="tag">
                             
-                            <a href="/tags/%E6%8E%92%E5%BA%8F%E6%B3%95/" style="color: #03a9f4">
+                            <a href="/tags/%E6%8E%92%E5%BA%8F%E6%B3%95/" style="color: #ff7d73">
+                                排序法
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline" data-title="泡沫排序法(bubblesort)">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2023/5/29</div>
+                <a href="/2023/05/29/BubbleSort/">
+                    <h3>泡沫排序法(Bubble Sort)</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/">
+                            <span class="icon">
+                                <i class="fa-solid fa-bookmark fa-fw"></i>
+                            </span>
+                            程式筆記
+                        </a>
+                    </span>
+                    
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </span>
+                        
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/%E6%8E%92%E5%BA%8F%E6%B3%95/" style="color: #00a596">
                                 排序法
                             </a>
                         </span>
@@ -461,7 +470,7 @@
                         
                         <span class="tag">
                             
-                            <a href="/tags/%E5%A4%A7%E6%A8%82%E9%80%8F/" style="color: #00a596">
+                            <a href="/tags/%E5%A4%A7%E6%A8%82%E9%80%8F/" style="color: #ffa2c4">
                                 大樂透
                             </a>
                         </span>
@@ -499,7 +508,7 @@
                         
                         <span class="tag">
                             
-                            <a href="/tags/python/" style="color: #03a9f4">
+                            <a href="/tags/python/" style="color: #ffa2c4">
                                 python
                             </a>
                         </span>
@@ -516,44 +525,6 @@
                 <div class="item-time">2023/6/3</div>
                 <a href="/2023/06/03/python/">
                     <h3>Python初學 I</h3>
-                </a>
-                <div class="info">
-                    
-                    <span class="category">
-                        <a href="/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/">
-                            <span class="icon">
-                                <i class="fa-solid fa-bookmark fa-fw"></i>
-                            </span>
-                            程式筆記
-                        </a>
-                    </span>
-                    
-                    
-                    <span class="tags">
-                        <span class="icon">
-                            <i class="fa-solid fa-tags fa-fw"></i>
-                        </span>
-                        
-                        
-                        <span class="tag">
-                            
-                            <a href="/tags/python/" style="color: #ffa2c4">
-                                python
-                            </a>
-                        </span>
-                        
-                    </span>
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="python初學iv">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2023/6/4</div>
-                <a href="/2023/06/04/python3/">
-                    <h3>Python初學 IV</h3>
                 </a>
                 <div class="info">
                     
@@ -592,6 +563,44 @@
                 <div class="item-time">2023/6/4</div>
                 <a href="/2023/06/04/python2/">
                     <h3>Python初學 III</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/">
+                            <span class="icon">
+                                <i class="fa-solid fa-bookmark fa-fw"></i>
+                            </span>
+                            程式筆記
+                        </a>
+                    </span>
+                    
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </span>
+                        
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/python/" style="color: #03a9f4">
+                                python
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline" data-title="python初學iv">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2023/6/4</div>
+                <a href="/2023/06/04/python3/">
+                    <h3>Python初學 IV</h3>
                 </a>
                 <div class="info">
                     
@@ -726,13 +735,13 @@
 
     <script src="/js/theme-toggle.js"></script>
 
-    <script src="/js/copy-code.js"></script>
-
-    <script src="/js/image-lightbox.js"></script>
-
     <script
         src="https://cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js"
         defer>
     </script>
+
+    <script src="/js/search-shortcut.js"></script>
+
+    
 </body>
 </html>
