@@ -1169,55 +1169,55 @@ html.dark-mode body {
     color: #d7d7d7;
 }
 /* 深色模式 */
-body.dark-mode {
+html.dark-mode {
     background: #181a1b;
     color: #d7d7d7;
 }
 
-body.dark-mode .article,
-body.dark-mode #archives,
-body.dark-mode #home-posts .post,
-body.dark-mode #home-card #card-style,
-body.dark-mode #toc {
+html.dark-mode .article,
+html.dark-mode #archives,
+html.dark-mode #home-posts .post,
+html.dark-mode #home-card #card-style,
+html.dark-mode #toc {
     color: #d7d7d7;
 }
 
-body.dark-mode #home-posts .post,
-body.dark-mode #home-card #card-style,
-body.dark-mode #toc,
-body.dark-mode .timeline-content {
+html.dark-mode #home-posts .post,
+html.dark-mode #home-card #card-style,
+html.dark-mode #toc,
+html.dark-mode .timeline-content {
     background: #242526;
     box-shadow: 0 2px 12px #00000055;
 }
 
-body.dark-mode h1,
-body.dark-mode h2,
-body.dark-mode h3,
-body.dark-mode h4,
-body.dark-mode h5,
-body.dark-mode h6 {
+html.dark-mode h1,
+html.dark-mode h2,
+html.dark-mode h3,
+html.dark-mode h4,
+html.dark-mode h5,
+html.dark-mode h6 {
     color: #f0f0f0;
 }
 
-body.dark-mode a {
+html.dark-mode a {
     color: #8fc7ff;
 }
 
-body.dark-mode code {
+html.dark-mode code {
     background: #2d333b;
 }
 
-body.dark-mode pre {
+html.dark-mode pre {
     border-color: #3a3f45;
     background: #22272e;
 }
 
-body.dark-mode blockquote {
+html.dark-mode blockquote {
     background: #263545;
     color: #d7d7d7;
 }
 
-body.dark-mode #theme-toggle {
+html.dark-mode #theme-toggle {
     background: #242526;
     color: #ffd369;
 }
@@ -1274,17 +1274,17 @@ body.dark-mode #theme-toggle {
     font-size: 12px;
 }
 
-body.dark-mode .project-card {
+html.dark-mode .project-card {
     background: #242526;
     color: #d7d7d7;
 }
 
-body.dark-mode .project-tags span {
+html.dark-mode .project-tags span {
     background: #33373b;
     color: #d7d7d7;
 }
 
-body.dark-mode .project-status {
+html.dark-mode .project-status {
     background: #24384d;
     color: #8fc7ff;
 }
@@ -1339,7 +1339,7 @@ body.dark-mode .project-status {
     opacity: 0.9;
 }
 
-body.dark-mode .error-page h1 {
+html.dark-mode .error-page h1 {
     color: #8fc7ff;
 }
 
@@ -1350,8 +1350,8 @@ body.dark-mode .error-page h1 {
     margin-right: 10px;
 }
 
-body.dark-mode .article .info .word-count,
-body.dark-mode .article .info .reading-time {
+html.dark-mode .article .info .word-count,
+html.dark-mode .article .info .reading-time {
     color: #b8b8b8;
 }
 
@@ -1402,15 +1402,15 @@ body.dark-mode .article .info .reading-time {
     color: #444;
 }
 
-body.dark-mode .post-nav-item {
+html.dark-mode .post-nav-item {
     background: #252525;
 }
 
-body.dark-mode .post-nav-title {
+html.dark-mode .post-nav-title {
     color: #ddd;
 }
 
-body.dark-mode .post-nav-label {
+html.dark-mode .post-nav-label {
     color: #aaa;
 }
 
@@ -1469,12 +1469,12 @@ pre:hover .copy-code-button {
     color: #8bd49c;
 }
 
-body.dark-mode .copy-code-button {
+html.dark-mode .copy-code-button {
     background: rgba(255, 255, 255, 0.14);
     color: #eee;
 }
 
-body.dark-mode .copy-code-button.copied {
+html.dark-mode .copy-code-button.copied {
     color: #8bd49c;
 }
 
@@ -1547,12 +1547,12 @@ pre.code-collapsed:not(.code-expanded)::after {
 }
 
 /* Dark Mode */
-body.dark-mode .code-expand-button {
+html.dark-mode .code-expand-button {
     background: #292d33;
     color: #bbb;
 }
 
-body.dark-mode .code-expand-button:hover {
+html.dark-mode .code-expand-button:hover {
     background: #343941;
     color: #eee;
 }
@@ -1705,23 +1705,23 @@ body.dark-mode .code-expand-button:hover {
 }
 
 /* Dark Mode */
-body.dark-mode .post-series {
+html.dark-mode .post-series {
     background: #252525;
 }
 
-body.dark-mode .post-series-title {
+html.dark-mode .post-series-title {
     color: #ddd;
 }
 
-body.dark-mode .post-series-item {
+html.dark-mode .post-series-item {
     color: #ccc !important;
 }
 
-body.dark-mode .post-series-item:hover {
+html.dark-mode .post-series-item:hover {
     background: #333;
 }
 
-body.dark-mode .post-series-item.current {
+html.dark-mode .post-series-item.current {
     background: #2c3d4d;
     color: #8fc7ff !important;
 }
@@ -1784,15 +1784,15 @@ body.dark-mode .post-series-item.current {
 }
 
 /* Dark Mode */
-body.dark-mode .site-stat-card {
+html.dark-mode .site-stat-card {
     background: rgba(255, 255, 255, 0.06);
 }
 
-body.dark-mode .site-stat-value {
+html.dark-mode .site-stat-value {
     color: #ddd;
 }
 
-body.dark-mode .site-stat-label {
+html.dark-mode .site-stat-label {
     color: #999;
 }
 
@@ -1840,15 +1840,15 @@ body.dark-mode .site-stat-label {
     color: #7bcf8e;
 }
 
-body.dark-mode .heading-anchor {
+html.dark-mode .heading-anchor {
     color: #888;
 }
 
-body.dark-mode .heading-anchor:hover {
+html.dark-mode .heading-anchor:hover {
     color: #8fc7ff;
 }
 
-body.dark-mode .heading-anchor.copied {
+html.dark-mode .heading-anchor.copied {
     color: #8bd49c;
 }
 
@@ -1857,4 +1857,28 @@ body.dark-mode .heading-anchor.copied {
     .heading-anchor {
         opacity: 0.65;
     }
+}
+
+/* Dark Mode Home Fix */
+#home-head {
+    position: relative;
+    overflow: hidden;
+}
+
+/* 背景固定在第 0 層 */
+#home-head #home-background {
+    z-index: 0;
+}
+
+/* 首頁中央動畫與文字固定在背景上方 */
+#home-head #home-info {
+    position: relative;
+    z-index: 1;
+}
+
+/* 深色模式首頁中央文字不要變成白色 */
+html.dark-mode #home-head #home-info .info .wrap h1,
+html.dark-mode #home-head #home-info .info .wrap h3,
+html.dark-mode #home-head #home-info .info .wrap h5 {
+    color: #333 !important;
 }
