@@ -99,3 +99,6 @@ deploy:
   type: git
   repo: https://github.com/YCC1203/YCC1203.github.io.git
   branch: master
+
+sitemap:
+  path: sitemap.xml

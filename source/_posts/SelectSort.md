@@ -6,6 +6,8 @@ categories:
   - 程式筆記
 tags:
   - 排序法
+series: 排序法
+series_order: 3
 description: 選擇排序法 Selection Sort 的基本原理與 C++ 實作
 ---
 

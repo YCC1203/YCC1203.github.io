@@ -12,6 +12,45 @@
             Based on the <a href="https://hexo.io">Hexo Engine</a> &amp;
             <a href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
         </div>
+        <%
+            let totalWords = 0;
+
+            site.posts.forEach(post => {
+                const text = post.content
+                    .replace(/<[^>]+>/g, "")
+                    .replace(/\s+/g, "");
+
+                totalWords += text.length;
+            });
+        %>
+
+        <div class="site-stats">
+
+            <div class="site-stat-card">
+                <i class="fa-solid fa-eye"></i>
+                <div class="site-stat-value" id="busuanzi_site_pv">...</div>
+                <div class="site-stat-label">瀏覽次數</div>
+            </div>
+
+            <div class="site-stat-card">
+                <i class="fa-solid fa-user"></i>
+                <div class="site-stat-value" id="busuanzi_site_uv">...</div>
+                <div class="site-stat-label">訪客數</div>
+            </div>
+
+            <div class="site-stat-card">
+                <i class="fa-solid fa-file-lines"></i>
+                <div class="site-stat-value"><%= site.posts.length %></div>
+                <div class="site-stat-label">文章數</div>
+            </div>
+
+            <div class="site-stat-card">
+                <i class="fa-solid fa-font"></i>
+                <div class="site-stat-value"><%= totalWords.toLocaleString() %></div>
+                <div class="site-stat-label">總字數</div>
+            </div>
+
+        </div>
         <% if (theme.footer.ICP.enable) { %>
         <div>
             备案号：

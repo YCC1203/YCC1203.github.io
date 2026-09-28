@@ -6,6 +6,8 @@ categories:
   - 程式筆記
 tags:
   - python
+series: Python 初學
+series_order: 2
 description: Python 計算機、列表與元組基礎筆記
 ---
 

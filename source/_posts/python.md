@@ -6,6 +6,8 @@ categories:
   - 程式筆記
 tags:
   - python
+series: Python 初學
+series_order: 1
 description: Python 基礎變數、字串與數字操作筆記
 ---
 

@@ -6,6 +6,8 @@ categories:
   - 程式筆記
 tags:
   - python
+series: Python 初學
+series_order: 4
 description: Python 字典、while 與 for 迴圈、二維列表基礎筆記
 ---
 

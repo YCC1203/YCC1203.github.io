@@ -18,6 +18,32 @@
             更新：<%= date(page.updated, "YYYY/M/D") %>
         </span>
         <% } %>
+        <%
+            const plainText = page.content
+                .replace(/<[^>]+>/g, "")
+                .replace(/\s+/g, "");
+
+            const wordCount = plainText.length;
+
+            const readingMinutes = Math.max(
+                1,
+                Math.ceil(wordCount / 400)
+            );
+        %>
+
+        <span class="word-count">
+            <span class="icon">
+                <i class="fa-solid fa-file-lines fa-fw"></i>
+            </span>
+            <%= wordCount %> 字
+        </span>
+
+        <span class="reading-time">
+            <span class="icon">
+                <i class="fa-solid fa-clock fa-fw"></i>
+            </span>
+            預估閱讀 <%= readingMinutes %> 分鐘
+        </span>
         <% if (page.categories && page.categories.data.length !== 0) { %>
         <span class="category">
             <a href="<%- url_for(page.categories.data[0].path) %>">
@@ -79,6 +105,85 @@
         </aside>
         <% } %>
     </div>
+    <% } %>
+    <% if (page.series) { %>
+    <%
+        const seriesPosts = site.posts
+            .filter(post => post.series === page.series)
+            .sort((a, b) => (a.series_order || 0) - (b.series_order || 0));
+    %>
+
+    <div class="post-series">
+        <div class="post-series-title">
+            <i class="fa-solid fa-layer-group"></i>
+            <%= page.series %>系列
+        </div>
+
+        <div class="post-series-list">
+            <% seriesPosts.forEach((post, index) => { %>
+
+                <% if (post.path === page.path) { %>
+                <div class="post-series-item current">
+                    <span class="series-number">
+                        <%= index + 1 %>
+                    </span>
+
+                    <span>
+                        <%= post.title %>
+                    </span>
+                </div>
+
+                <% } else { %>
+
+                <a
+                    class="post-series-item"
+                    href="<%- url_for(post.path) %>"
+                >
+                    <span class="series-number">
+                        <%= index + 1 %>
+                    </span>
+
+                    <span>
+                        <%= post.title %>
+                    </span>
+                </a>
+
+                <% } %>
+
+            <% }) %>
+        </div>
+    </div>
+    <% } %>
+    <% if (is_post() && (page.prev || page.next)) { %>
+    <nav class="post-navigation">
+
+        <% if (page.prev) { %>
+        <a class="post-nav-item prev" href="<%- url_for(page.prev.path) %>">
+            <span class="post-nav-label">
+                <i class="fa-solid fa-arrow-left"></i>
+                上一篇
+            </span>
+            <span class="post-nav-title">
+                <%= page.prev.title %>
+            </span>
+        </a>
+        <% } else { %>
+        <div></div>
+        <% } %>
+
+        <% if (page.next) { %>
+        <a class="post-nav-item next" href="<%- url_for(page.next.path) %>">
+            <span class="post-nav-label">
+                下一篇
+                <i class="fa-solid fa-arrow-right"></i>
+            </span>
+            <span class="post-nav-title">
+                <%= page.next.title %>
+            </span>
+        </a>
+        <% } %>
+
+    </nav>
     <% } %>
     <% if (page.comments) { %>
     <% if (theme.gitalk.enable) { %>

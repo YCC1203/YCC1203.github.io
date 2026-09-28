@@ -6,6 +6,8 @@ categories:
   - 程式筆記
 tags:
   - python
+series: Python 初學
+series_order: 3
 description: Python 函式與 if 判斷句基礎筆記
 ---
 
