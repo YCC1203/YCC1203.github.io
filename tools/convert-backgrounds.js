@@ -2,8 +2,14 @@ const fs = require("fs");
 const path = require("path");
 const sharp = require("sharp");
 
-const sourceDir = path.join(__dirname, "..", "source", "images");
-const outputDir = path.join(sourceDir, "backgrounds");
+const sourceDir = path.join(__dirname, "..", "original-backgrounds");
+const outputDir = path.join(
+    __dirname,
+    "..",
+    "source",
+    "images",
+    "backgrounds"
+);
 
 const extensions = [".jpg", ".jpeg", ".png"];
 
