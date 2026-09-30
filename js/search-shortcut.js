@@ -19,16 +19,30 @@ document.addEventListener("keydown", (event) => {
 document.addEventListener("DOMContentLoaded", () => {
     const params = new URLSearchParams(window.location.search);
 
-    if (params.get("focus") !== "search") return;
+    const focus = params.get("focus");
+    const keyword = params.get("keyword");
 
-    const focusSearch = () => {
+    if (focus !== "search" && !keyword) return;
+
+    setTimeout(() => {
         const searchBar = document.getElementById("search-bar");
 
-        if (searchBar) {
-            searchBar.focus();
+        if (!searchBar) return;
+
+        if (keyword) {
+            searchBar.value = keyword;
+
+            searchBar.dispatchEvent(
+                new Event("input", {
+                    bubbles: true
+                })
+            );
+        }
+
+        searchBar.focus();
+
+        if (!keyword) {
             searchBar.select();
         }
-    };
-
-    setTimeout(focusSearch, 200);
+    }, 200);
 });

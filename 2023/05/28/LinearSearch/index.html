@@ -14,11 +14,11 @@
     </script>
     <title>線性搜尋法(Linear Search) | ychen&#39;s Blog</title>
     <meta name="author" content="YCC1203" />
-    <meta name="description" content="" />
+    <meta name="description" content="記錄程式設計、電機電子學習與 Arduino 專題開發的個人部落格" />
     <meta name="keywords" content="" />
     <meta
         name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+        content="width=device-width, initial-scale=1.0"
     />
     <link rel="icon" href="/images/IMG_1030.jpg" />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
@@ -190,9 +190,12 @@
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             <div class="article">
+    
     <div>
         <h1>線性搜尋法(Linear Search)</h1>
     </div>
+    
+    
     <div class="info">
         <span class="date">
             <span class="icon">
@@ -243,7 +246,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/%E6%90%9C%E5%B0%8B%E6%B3%95/" style="color: #03a9f4">
+                <a href="/tags/%E6%90%9C%E5%B0%8B%E6%B3%95/" style="color: #00a596">
                     搜尋法
                 </a>
             </span>
@@ -251,6 +254,7 @@
         </span>
         
     </div>
+    
     
     <div class="article-layout">
         <div class="article-main">
@@ -319,6 +323,27 @@ int LinearSearch(int data[], int search) {
             <div class="toc-content"></div>
         </aside>
         
+
+        
+        <button id="mobile-toc-button" aria-label="開啟文章目錄">
+            <i class="fa-solid fa-list"></i>
+            <span>目錄</span>
+        </button>
+
+        <div id="mobile-toc-overlay"></div>
+
+        <aside id="mobile-toc">
+            <div class="mobile-toc-header">
+                <span>文章目錄</span>
+
+                <button id="mobile-toc-close" aria-label="關閉文章目錄">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="mobile-toc-content"></div>
+        </aside>
+        
     </div>
     
     
@@ -343,10 +368,6 @@ int LinearSearch(int data[], int search) {
     
     
     
-    
-    <div id="comment">
-        <div id="giscus-container" class="giscus"></div>
-    </div>
     
     
     
@@ -412,23 +433,6 @@ int LinearSearch(int data[], int search) {
     <script src="/js/main.js"></script>
     
     
-<script
-    src="https://giscus.app/client.js"
-    data-repo="YCC1203/YCC1203.github.io"
-    data-repo-id="R_kgDOJifRFA"
-    data-category="Announcements"
-    data-category-id="DIC_kwDOJifRFM4CW3Hj"
-    data-mapping="url"
-    data-strict="0"
-    data-reactions-enabled="1"
-    data-emit-metadata="0"
-    data-input-position="top"
-    data-theme="light"
-    data-lang="zh-TW"
-    crossorigin
-    async
-></script>
-
 
 
 
@@ -459,6 +463,7 @@ int LinearSearch(int data[], int search) {
 
     
     <script src="/js/toc.js"></script>
+    <script src="/js/mobile-toc.js"></script>
     
 
     <!-- 回到頂部按鈕 -->
@@ -486,10 +491,14 @@ int LinearSearch(int data[], int search) {
 
     <script src="/js/search-shortcut.js"></script>
 
+    <script src="/js/404-search.js"></script>
+
     
     <script src="/js/copy-code.js"></script>
     <script src="/js/heading-anchor.js"></script>
     <script src="/js/image-lightbox.js"></script>
+    
+
     
 </body>
 </html>

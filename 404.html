@@ -14,11 +14,11 @@
     </script>
     <title>404 | ychen&#39;s Blog</title>
     <meta name="author" content="YCC1203" />
-    <meta name="description" content="" />
+    <meta name="description" content="記錄程式設計、電機電子學習與 Arduino 專題開發的個人部落格" />
     <meta name="keywords" content="" />
     <meta
         name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+        content="width=device-width, initial-scale=1.0"
     />
     <link rel="icon" href="/images/IMG_1030.jpg" />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
@@ -53,14 +53,14 @@
     
 
     <meta property="og:title" content="404 | ychen's Blog" />
-    <meta property="og:description" content="YCC1203's Blog" />
+    <meta property="og:description" content="記錄程式設計、電機電子學習與 Arduino 專題開發的個人部落格" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://YCC1203.github.io/404.html" />
     <meta property="og:image" content="https://YCC1203.github.io/images/og-image.jpg" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="404 | ychen's Blog" />
-    <meta name="twitter:description" content="YCC1203's Blog" />
+    <meta name="twitter:description" content="記錄程式設計、電機電子學習與 Arduino 專題開發的個人部落格" />
     <meta name="twitter:image" content="https://YCC1203.github.io/images/og-image.jpg" />
 <meta name="generator" content="Hexo 8.1.2"></head>
 <body>
@@ -184,50 +184,28 @@
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             <div class="article">
-    <div>
-        <h1>404</h1>
-    </div>
-    <div class="info">
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            發布：2026/9/28
-        </span>
-
-        
-        
-
-        <span class="word-count">
-            <span class="icon">
-                <i class="fa-solid fa-file-lines fa-fw"></i>
-            </span>
-            37 字
-        </span>
-
-        <span class="reading-time">
-            <span class="icon">
-                <i class="fa-solid fa-clock fa-fw"></i>
-            </span>
-            預估閱讀 1 分鐘
-        </span>
-        
-        
-    </div>
+    
+    
     
     <div class="article-layout">
         <div class="article-main">
             <div class="content" v-pre>
                 <div class="error-page">
+<h1>404</h1>
+<h2>找不到這個頁面</h2>
+<p>你可以搜尋網站中的文章，或直接回到首頁。</p>
 
-<h1 id="404"><a href="#404" class="headerlink" title="404"></a>404</h1><h2 id="找不到這個頁面"><a href="#找不到這個頁面" class="headerlink" title="找不到這個頁面"></a>找不到這個頁面</h2><p>你可能輸入了錯誤的網址，或這個頁面已經被移動。</p>
-<a class="error-home-button" href="/">
-    回到首頁
-</a>
+<form id="error-search-form" class="error-search">
+<input id="error-search-input" type="text" placeholder="搜尋文章..." autocomplete="off">
+<button type="submit"><i class="fa-solid fa-magnifying-glass"></i> 搜尋</button>
+</form>
 
+<p><a class="error-home-button" href="/">回到首頁</a></p>
 </div>
             </div>
         </div>
+
+        
 
         
     </div>
@@ -342,6 +320,10 @@
     </script>
 
     <script src="/js/search-shortcut.js"></script>
+
+    <script src="/js/404-search.js"></script>
+
+    
 
     
 </body>

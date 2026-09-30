@@ -14,11 +14,11 @@
     </script>
     <title>插入排序法(InsertSort) | ychen&#39;s Blog</title>
     <meta name="author" content="YCC1203" />
-    <meta name="description" content="" />
+    <meta name="description" content="記錄程式設計、電機電子學習與 Arduino 專題開發的個人部落格" />
     <meta name="keywords" content="" />
     <meta
         name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+        content="width=device-width, initial-scale=1.0"
     />
     <link rel="icon" href="/images/IMG_1030.jpg" />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
@@ -190,9 +190,12 @@
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             <div class="article">
+    
     <div>
         <h1>插入排序法(InsertSort)</h1>
     </div>
+    
+    
     <div class="info">
         <span class="date">
             <span class="icon">
@@ -251,6 +254,7 @@
         </span>
         
     </div>
+    
     
     <div class="article-layout">
         <div class="article-main">
@@ -337,6 +341,27 @@ void insert(int data[]) {
             <div class="toc-content"></div>
         </aside>
         
+
+        
+        <button id="mobile-toc-button" aria-label="開啟文章目錄">
+            <i class="fa-solid fa-list"></i>
+            <span>目錄</span>
+        </button>
+
+        <div id="mobile-toc-overlay"></div>
+
+        <aside id="mobile-toc">
+            <div class="mobile-toc-header">
+                <span>文章目錄</span>
+
+                <button id="mobile-toc-close" aria-label="關閉文章目錄">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="mobile-toc-content"></div>
+        </aside>
+        
     </div>
     
     
@@ -355,14 +380,14 @@ void insert(int data[]) {
 
                 <a
                     class="post-series-item"
-                    href="/2023/05/29/BubbleSort/"
+                    href="/2023/05/29/SelectSort/"
                 >
                     <span class="series-number">
                         1
                     </span>
 
                     <span>
-                        泡沫排序法(Bubble Sort)
+                        選擇排序法(Select Sort)
                     </span>
                 </a>
 
@@ -389,14 +414,14 @@ void insert(int data[]) {
 
                 <a
                     class="post-series-item"
-                    href="/2023/05/29/SelectSort/"
+                    href="/2023/05/29/BubbleSort/"
                 >
                     <span class="series-number">
                         3
                     </span>
 
                     <span>
-                        選擇排序法(Select Sort)
+                        泡沫排序法(Bubble Sort)
                     </span>
                 </a>
 
@@ -422,13 +447,13 @@ void insert(int data[]) {
         
 
         
-        <a class="post-nav-item next" href="/2023/05/29/LinkedList/">
+        <a class="post-nav-item next" href="/2023/05/29/SelectSort/">
             <span class="post-nav-label">
                 下一篇
                 <i class="fa-solid fa-arrow-right"></i>
             </span>
             <span class="post-nav-title">
-                鏈結串列(LinkedList)
+                選擇排序法(Select Sort)
             </span>
         </a>
         
@@ -437,10 +462,6 @@ void insert(int data[]) {
     
     
     
-    
-    <div id="comment">
-        <div id="giscus-container" class="giscus"></div>
-    </div>
     
     
     
@@ -506,23 +527,6 @@ void insert(int data[]) {
     <script src="/js/main.js"></script>
     
     
-<script
-    src="https://giscus.app/client.js"
-    data-repo="YCC1203/YCC1203.github.io"
-    data-repo-id="R_kgDOJifRFA"
-    data-category="Announcements"
-    data-category-id="DIC_kwDOJifRFM4CW3Hj"
-    data-mapping="url"
-    data-strict="0"
-    data-reactions-enabled="1"
-    data-emit-metadata="0"
-    data-input-position="top"
-    data-theme="light"
-    data-lang="zh-TW"
-    crossorigin
-    async
-></script>
-
 
 
 
@@ -553,6 +557,7 @@ void insert(int data[]) {
 
     
     <script src="/js/toc.js"></script>
+    <script src="/js/mobile-toc.js"></script>
     
 
     <!-- 回到頂部按鈕 -->
@@ -580,10 +585,14 @@ void insert(int data[]) {
 
     <script src="/js/search-shortcut.js"></script>
 
+    <script src="/js/404-search.js"></script>
+
     
     <script src="/js/copy-code.js"></script>
     <script src="/js/heading-anchor.js"></script>
     <script src="/js/image-lightbox.js"></script>
+    
+
     
 </body>
 </html>

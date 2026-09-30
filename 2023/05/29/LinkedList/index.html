@@ -14,11 +14,11 @@
     </script>
     <title>鏈結串列(LinkedList) | ychen&#39;s Blog</title>
     <meta name="author" content="YCC1203" />
-    <meta name="description" content="" />
+    <meta name="description" content="記錄程式設計、電機電子學習與 Arduino 專題開發的個人部落格" />
     <meta name="keywords" content="" />
     <meta
         name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+        content="width=device-width, initial-scale=1.0"
     />
     <link rel="icon" href="/images/IMG_1030.jpg" />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
@@ -190,9 +190,12 @@
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             <div class="article">
+    
     <div>
         <h1>鏈結串列(LinkedList)</h1>
     </div>
+    
+    
     <div class="info">
         <span class="date">
             <span class="icon">
@@ -236,6 +239,7 @@
         
         
     </div>
+    
     
     <div class="article-layout">
         <div class="article-main">
@@ -454,6 +458,27 @@ void displayList(struct Node* node) {
             <div class="toc-content"></div>
         </aside>
         
+
+        
+        <button id="mobile-toc-button" aria-label="開啟文章目錄">
+            <i class="fa-solid fa-list"></i>
+            <span>目錄</span>
+        </button>
+
+        <div id="mobile-toc-overlay"></div>
+
+        <aside id="mobile-toc">
+            <div class="mobile-toc-header">
+                <span>文章目錄</span>
+
+                <button id="mobile-toc-close" aria-label="關閉文章目錄">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="mobile-toc-content"></div>
+        </aside>
+        
     </div>
     
     
@@ -461,25 +486,25 @@ void displayList(struct Node* node) {
     <nav class="post-navigation">
 
         
-        <a class="post-nav-item prev" href="/2023/05/29/InsertSort/">
+        <a class="post-nav-item prev" href="/2023/05/29/Queue/">
             <span class="post-nav-label">
                 <i class="fa-solid fa-arrow-left"></i>
                 上一篇
             </span>
             <span class="post-nav-title">
-                插入排序法(InsertSort)
+                佇列(Queue)
             </span>
         </a>
         
 
         
-        <a class="post-nav-item next" href="/2023/05/29/Queue/">
+        <a class="post-nav-item next" href="/2023/05/29/Stack/">
             <span class="post-nav-label">
                 下一篇
                 <i class="fa-solid fa-arrow-right"></i>
             </span>
             <span class="post-nav-title">
-                佇列(Queue)
+                堆疊(Stack)
             </span>
         </a>
         
@@ -488,10 +513,6 @@ void displayList(struct Node* node) {
     
     
     
-    
-    <div id="comment">
-        <div id="giscus-container" class="giscus"></div>
-    </div>
     
     
     
@@ -557,23 +578,6 @@ void displayList(struct Node* node) {
     <script src="/js/main.js"></script>
     
     
-<script
-    src="https://giscus.app/client.js"
-    data-repo="YCC1203/YCC1203.github.io"
-    data-repo-id="R_kgDOJifRFA"
-    data-category="Announcements"
-    data-category-id="DIC_kwDOJifRFM4CW3Hj"
-    data-mapping="url"
-    data-strict="0"
-    data-reactions-enabled="1"
-    data-emit-metadata="0"
-    data-input-position="top"
-    data-theme="light"
-    data-lang="zh-TW"
-    crossorigin
-    async
-></script>
-
 
 
 
@@ -604,6 +608,7 @@ void displayList(struct Node* node) {
 
     
     <script src="/js/toc.js"></script>
+    <script src="/js/mobile-toc.js"></script>
     
 
     <!-- 回到頂部按鈕 -->
@@ -631,10 +636,14 @@ void displayList(struct Node* node) {
 
     <script src="/js/search-shortcut.js"></script>
 
+    <script src="/js/404-search.js"></script>
+
     
     <script src="/js/copy-code.js"></script>
     <script src="/js/heading-anchor.js"></script>
     <script src="/js/image-lightbox.js"></script>
+    
+
     
 </body>
 </html>

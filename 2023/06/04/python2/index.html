@@ -14,11 +14,11 @@
     </script>
     <title>Python初學 III | ychen&#39;s Blog</title>
     <meta name="author" content="YCC1203" />
-    <meta name="description" content="" />
+    <meta name="description" content="記錄程式設計、電機電子學習與 Arduino 專題開發的個人部落格" />
     <meta name="keywords" content="" />
     <meta
         name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+        content="width=device-width, initial-scale=1.0"
     />
     <link rel="icon" href="/images/IMG_1030.jpg" />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
@@ -190,9 +190,12 @@
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             <div class="article">
+    
     <div>
         <h1>Python初學 III</h1>
     </div>
+    
+    
     <div class="info">
         <span class="date">
             <span class="icon">
@@ -243,7 +246,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/python/" style="color: #ff7d73">
+                <a href="/tags/python/" style="color: #ffa2c4">
                     python
                 </a>
             </span>
@@ -251,6 +254,7 @@
         </span>
         
     </div>
+    
     
     <div class="article-layout">
         <div class="article-main">
@@ -360,6 +364,27 @@ print(max_num(2, 3, 5))
             <div class="toc-content"></div>
         </aside>
         
+
+        
+        <button id="mobile-toc-button" aria-label="開啟文章目錄">
+            <i class="fa-solid fa-list"></i>
+            <span>目錄</span>
+        </button>
+
+        <div id="mobile-toc-overlay"></div>
+
+        <aside id="mobile-toc">
+            <div class="mobile-toc-header">
+                <span>文章目錄</span>
+
+                <button id="mobile-toc-close" aria-label="關閉文章目錄">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="mobile-toc-content"></div>
+        </aside>
+        
     </div>
     
     
@@ -375,9 +400,28 @@ print(max_num(2, 3, 5))
             
 
                 
-                <div class="post-series-item current">
+
+                <a
+                    class="post-series-item"
+                    href="/2023/06/04/python3/"
+                >
                     <span class="series-number">
                         1
+                    </span>
+
+                    <span>
+                        Python初學 IV
+                    </span>
+                </a>
+
+                
+
+            
+
+                
+                <div class="post-series-item current">
+                    <span class="series-number">
+                        2
                     </span>
 
                     <span>
@@ -393,14 +437,14 @@ print(max_num(2, 3, 5))
 
                 <a
                     class="post-series-item"
-                    href="/2023/06/04/python3/"
+                    href="/2023/06/03/python/"
                 >
                     <span class="series-number">
-                        2
+                        3
                     </span>
 
                     <span>
-                        Python初學 IV
+                        Python初學 I
                     </span>
                 </a>
 
@@ -415,30 +459,11 @@ print(max_num(2, 3, 5))
                     href="/2023/06/03/python1/"
                 >
                     <span class="series-number">
-                        3
-                    </span>
-
-                    <span>
-                        Python初學 II
-                    </span>
-                </a>
-
-                
-
-            
-
-                
-
-                <a
-                    class="post-series-item"
-                    href="/2023/06/03/python/"
-                >
-                    <span class="series-number">
                         4
                     </span>
 
                     <span>
-                        Python初學 I
+                        Python初學 II
                     </span>
                 </a>
 
@@ -452,17 +477,25 @@ print(max_num(2, 3, 5))
     <nav class="post-navigation">
 
         
-        <div></div>
+        <a class="post-nav-item prev" href="/2023/06/04/python3/">
+            <span class="post-nav-label">
+                <i class="fa-solid fa-arrow-left"></i>
+                上一篇
+            </span>
+            <span class="post-nav-title">
+                Python初學 IV
+            </span>
+        </a>
         
 
         
-        <a class="post-nav-item next" href="/2023/06/04/python3/">
+        <a class="post-nav-item next" href="/2023/06/03/python/">
             <span class="post-nav-label">
                 下一篇
                 <i class="fa-solid fa-arrow-right"></i>
             </span>
             <span class="post-nav-title">
-                Python初學 IV
+                Python初學 I
             </span>
         </a>
         
@@ -471,10 +504,6 @@ print(max_num(2, 3, 5))
     
     
     
-    
-    <div id="comment">
-        <div id="giscus-container" class="giscus"></div>
-    </div>
     
     
     
@@ -540,23 +569,6 @@ print(max_num(2, 3, 5))
     <script src="/js/main.js"></script>
     
     
-<script
-    src="https://giscus.app/client.js"
-    data-repo="YCC1203/YCC1203.github.io"
-    data-repo-id="R_kgDOJifRFA"
-    data-category="Announcements"
-    data-category-id="DIC_kwDOJifRFM4CW3Hj"
-    data-mapping="url"
-    data-strict="0"
-    data-reactions-enabled="1"
-    data-emit-metadata="0"
-    data-input-position="top"
-    data-theme="light"
-    data-lang="zh-TW"
-    crossorigin
-    async
-></script>
-
 
 
 
@@ -587,6 +599,7 @@ print(max_num(2, 3, 5))
 
     
     <script src="/js/toc.js"></script>
+    <script src="/js/mobile-toc.js"></script>
     
 
     <!-- 回到頂部按鈕 -->
@@ -614,10 +627,14 @@ print(max_num(2, 3, 5))
 
     <script src="/js/search-shortcut.js"></script>
 
+    <script src="/js/404-search.js"></script>
+
     
     <script src="/js/copy-code.js"></script>
     <script src="/js/heading-anchor.js"></script>
     <script src="/js/image-lightbox.js"></script>
+    
+
     
 </body>
 </html>
