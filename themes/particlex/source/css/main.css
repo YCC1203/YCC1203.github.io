@@ -308,7 +308,7 @@
     line-height: 1.7;
 }
 #home-posts .post-title {
-    color: #66afef;
+    color: #2f6fae;
     text-align: center;
 }
 #home-posts .post:hover {
@@ -842,11 +842,11 @@ ol li {
         font-weight: bold;
         margin-bottom: 10px;
     }
-    #home-head #home-info .info .wrap h3 {
+    #home-head #home-info .info .wrap h2 {
         font-size: 24px;
         margin: 10px 0;
     }
-    #home-head #home-info .info .wrap h5 {
+    #home-head #home-info .info .wrap h3 {
         font-size: 16px;
         margin: 20px 0;
     }
@@ -927,11 +927,11 @@ ol li {
         font-size: 46px;
         margin-bottom: 10px;
     }
-    #home-head #home-info .info .wrap h3 {
+    #home-head #home-info .info .wrap h2 {
         font-size: 20px;
         margin: 10px 0;
     }
-    #home-head #home-info .info .wrap h5 {
+    #home-head #home-info .info .wrap h3 {
         font-size: 14px;
         margin: 20px 0;
     }
@@ -1850,7 +1850,7 @@ html.dark-mode .post-series-item.current {
 
     font-size: 12px;
 
-    color: #888;
+    color: #5c6b72;
 }
 
 /* Dark Mode */
@@ -1948,8 +1948,8 @@ html.dark-mode .heading-anchor.copied {
 
 /* 深色模式首頁中央文字不要變成白色 */
 html.dark-mode #home-head #home-info .info .wrap h1,
-html.dark-mode #home-head #home-info .info .wrap h3,
-html.dark-mode #home-head #home-info .info .wrap h5 {
+html.dark-mode #home-head #home-info .info .wrap h2,
+html.dark-mode #home-head #home-info .info .wrap h3 {
     color: #333 !important;
 }
 
