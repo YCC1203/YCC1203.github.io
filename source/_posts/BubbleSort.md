@@ -8,6 +8,7 @@ tags:
   - 排序法
 series: 排序法
 series_order: 1
+pinned: 1
 description: 泡沫排序法 Bubble Sort 的基本原理與 C++ 實作
 ---
 

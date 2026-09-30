@@ -127,7 +127,7 @@ search:
 # giscus
 # https://github.com/giscus/giscus
 giscus:
-    enable: true
+    enable: false
     src: https://giscus.app/client.js
     repo: YCC1203/YCC1203.github.io
     repoID: R_kgDOJifRFA

@@ -50,3 +50,98 @@ comments: false
 之後會持續補充硬體選擇、程式設計、控制方法、測試結果與遇到的問題。
 
 </div>
+
+## Arduino 雙輪平衡車
+
+<div class="project-card">
+
+<div class="project-status">開發中</div>
+
+### 專案進度
+
+<div class="project-progress" data-progress="0">
+    <div class="project-progress-bar"></div>
+</div>
+
+<div class="project-progress-text"></div>
+
+### 已完成
+
+- 專題方向確認
+- 硬體元件規劃
+- Arduino 開發環境建立
+- IMU 感測器研究
+
+### 進行中
+
+- IMU 角度讀取
+- 馬達控制
+- PID 控制測試
+
+### 待完成
+
+- 編碼器回授
+- 自動平衡控制
+- 避障功能
+- 藍牙控制
+- 整車測試與調參
+
+</div>
+
+### 專案里程碑
+
+<div class="project-timeline">
+
+<div class="project-timeline-item done">
+<div class="project-timeline-dot"></div>
+<div class="project-timeline-content">
+
+#### 2026 / 09 — 專題規劃
+
+- 確定雙輪平衡車主題
+- 硬體元件規劃
+- 開發環境建立
+
+</div>
+</div>
+
+<div class="project-timeline-item current">
+<div class="project-timeline-dot"></div>
+<div class="project-timeline-content">
+
+#### 2026 / 10 — 感測器與馬達控制
+
+- IMU 角度讀取
+- 馬達控制
+- PID 初步測試
+
+</div>
+</div>
+
+<div class="project-timeline-item">
+<div class="project-timeline-dot"></div>
+<div class="project-timeline-content">
+
+#### 2026 / 11 — 自動平衡
+
+- PID 參數調整
+- 編碼器回授
+- 平衡穩定性測試
+
+</div>
+</div>
+
+<div class="project-timeline-item">
+<div class="project-timeline-dot"></div>
+<div class="project-timeline-content">
+
+#### 2026 / 12 — 功能整合
+
+- 避障功能
+- 藍牙控制
+- 整車測試與調參
+
+</div>
+</div>
+
+</div>

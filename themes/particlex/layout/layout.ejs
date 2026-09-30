@@ -31,7 +31,7 @@
     <meta name="keywords" content="<%- config.keywords %>" />
     <meta
         name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+        content="width=device-width, initial-scale=1.0"
     />
     <link rel="icon" href="<%- url_for(theme.avatar) %>" />
     <%- partial("import", { type }) %>
@@ -109,6 +109,7 @@
 
     <% if (is_post()) { %>
     <script src="<%- url_for('/js/toc.js') %>"></script>
+    <script src="<%- url_for('/js/mobile-toc.js') %>"></script>
     <% } %>
 
     <!-- 回到頂部按鈕 -->
@@ -136,10 +137,16 @@
 
     <script src="<%- url_for('/js/search-shortcut.js') %>"></script>
 
+    <script src="<%- url_for('/js/404-search.js') %>"></script>
+
     <% if (is_post()) { %>
     <script src="<%- url_for('/js/copy-code.js') %>"></script>
     <script src="<%- url_for('/js/heading-anchor.js') %>"></script>
     <script src="<%- url_for('/js/image-lightbox.js') %>"></script>
+    <% } %>
+
+    <% if (page.path === "projects/index.html") { %>
+    <script src="<%- url_for('/js/project-progress.js') %>"></script>
     <% } %>
 </body>
 </html>

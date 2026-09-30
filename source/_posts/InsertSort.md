@@ -8,6 +8,7 @@ tags:
   - 排序法
 series: 排序法
 series_order: 2
+pinned: 2
 description: 插入排序法 Insertion Sort 的基本原理與 C++ 實作
 ---
 

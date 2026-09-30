@@ -8,7 +8,19 @@
     <% } %>
     <div id="timeline-wrap" ref="timeline">
         <% posts.reverse().forEach((post, id) => { %>
-        <div class="timeline" data-title="<%- post.title.toLowerCase().replace(/\s+/g, "") %>">
+        <%
+            const searchText = [
+                post.title || "",
+                post.description || "",
+                ...(post.categories?.data || []).map(category => category.name),
+                ...(post.tags?.data || []).map(tag => tag.name)
+            ]
+                .join(" ")
+                .toLowerCase()
+                .replace(/\s+/g, "");
+        %>
+
+        <div class="timeline" data-search="<%= searchText %>">
             <div class="timeline-tail"></div>
             <div class="timeline-content">
                 <div class="item-time"><%= date(post.date, "YYYY/M/D") %></div>
